@@ -18,10 +18,21 @@ def main():
 
     try:
         # TODO: Define a constant with maximum number of guesses, and loop idx for the number of times
-        # of the guesses to get a word
+        # of the guesses to get a word.
         idx = 0
+
+        # TODO: Define a variable for the state of the game, which can be WIN, LOSS, or GUESS. Create a loop, which
+        #  should continue as long as the state is GUESS.
+
+        # TODO: Check to see the state of the game.  If the user guessed the word correctly, update the title
+        #  to show that the user won. If the user has guessed six time and failed to guess the word, update the title
+        # to show that the user lost.  Otherwise, change the title to reflect the guess that they are currently on.
+        # make sure to change the state variable appropriately.
         print_title("Guess 1")
+
         show_guesses(guesses, word)
+
+        # TODO: only call guess_word if the user is still in guess mode.  Make sure to change the idx appropriately.
         guesses[idx] = guess_word(guesses)
 
     # If the user exits the program with control-C, skip the error and go to game over.
@@ -79,11 +90,9 @@ def guess_word(previous_guesses):
     return guess
 
 def print_title(title):
-    # Print the title
-    print(title)
     # TODO: Add rich styling, here is an example
-    #console.clear()
-    #console.rule(f"[blue]:leafy_green: {title} :leafy_green:[/]\n")
+    console.clear()
+    console.rule(f"[blue]:leafy_green: {title} :leafy_green:[/]\n")
 
 
 if __name__ == "__main__":
