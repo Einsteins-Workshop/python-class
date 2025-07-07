@@ -1,4 +1,9 @@
 # Different types can have different operations performed on them.
+print (4 + 4)
+print ("4" + "4")
+print (4 +int("4"))
+str (4)
+int ("4")
 
 number_four = 4
 print("This is the result of adding two number fours")
@@ -17,7 +22,7 @@ print(int("100") + 11)
 print("This is the number:" + str(4))
 # The int() function is particularly useful for trying to use input() to get a number from the user
 # as input() always returns a string
-number_as_a_string = input("Enter a number\n")
+number_as_a_string = input("Enter a number")
 number = int(number_as_a_string)
 print("Double that number is:")
 print(number + number)
