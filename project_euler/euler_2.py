@@ -8,4 +8,15 @@
 # find the sum of the even-valued terms.
 
 # Replace the below with your program.
-print(2+8+34)
+a = 1
+b = 2
+sum1 = 2
+
+while a+b <= 4000000:
+    result = a + b
+    a = b
+    b = result
+    if result % 2 == 0:
+        sum1 += result
+
+print(sum1)

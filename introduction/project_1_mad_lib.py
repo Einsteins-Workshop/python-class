@@ -1,14 +1,8 @@
-# Make your own mad lib
-# Look at sample_1_input_output.py for example statements
+day = input("day of the week: ")
+time = input("time of day (morning, night, etc.): ")
+noun1 = input("noun: ")
+verb = input("verb (past-tense): ")
+noun2 = input("noun: ")
+location = input("proper noun (location): ")
 
-# Ask the user for a variety of inputs
-color = input("Enter a color: ")
-plural_noun = input("Enter a plural noun: ")
-noun = input("Enter a noun: ")
-adjective = input("Enter an adjective")
-
-# Then print your mad lib using the user input
-print("Roses are ", color)
-print(plural_noun + " are blue")
-print(f"{noun} is {adjective}")
-print("and so are you.")
+print(f"I think it was last {day} {time} when the {noun1} {verb} all over the {noun2} at {location}")
