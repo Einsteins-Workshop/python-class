@@ -1,4 +1,5 @@
-# Different types can have different operations performed on them.
+      # Different types can have different operations performed on them.
+print(str(4)+"4")
 
 number_four = 4
 print("This is the result of adding two number fours")
@@ -21,6 +22,7 @@ number_as_a_string = input("Enter a number\n")
 number = int(number_as_a_string)
 print("Double that number is:")
 print(number + number)
+
 
 # Also note in the input function of the prior example the "\n" in the string. This represents
 # a new line.

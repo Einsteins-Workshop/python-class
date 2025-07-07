@@ -10,5 +10,5 @@ adjective = input("Enter an adjective")
 # Then print your mad lib using the user input
 print("Roses are ", color)
 print(plural_noun + " are blue")
-print(f"{noun} is {adjective}")
+print(f"{noun} are {adjective}")
 print("and so are you.")

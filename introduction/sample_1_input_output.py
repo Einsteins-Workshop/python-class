@@ -10,6 +10,9 @@ pet_name = "Fido"
 print("Hello World!")
 print(age)
 print(pet_name)
+print(firstName)
+
+first_name= 'Paxton'
 
 # To get input from the user from the console, use the input function. You can include
 # a prompt, as an argument, to the function.
@@ -19,6 +22,6 @@ name = input("Please enter your first name.")
 # using f"" templates.
 
 print("Hello " + name + "!")
-last_name = input("Please enter your last name.")
+last_name = input("Please enter your first name.")
 
 print(f"Your full name is {name} {last_name}.")
