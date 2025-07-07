@@ -26,7 +26,7 @@ complex_list = [1, 2, "a", "b", [1, 2, 3]]
 print("\n\n")
 print(f"A more complex list is: {complex_list}")
 print(f"The first element of that list is complex_list[0]")
-print(f"Indexing on -1 and then 2 of that list is complex_list[-1][2]")
+print(f"Indexing on -1 and then 2 of that list is {complex_list[-1][2]}")
 
 # You can also use the range() function to quickly get a list of numbers from 0 to one less than the
 # argument

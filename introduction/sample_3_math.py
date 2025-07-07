@@ -13,9 +13,9 @@ module = 10 % 3        # This is equal to 1
 print(f"10 % 3 = {module}")
 power = pow(2, 10)     # This is equal to 2^10 = 1024
 print(f"2^10 = {power}")
-
-absolute = abs(-1)     # This is equal to 1
+absolute = abs(-1)
 print(f"|-1| = {absolute}")
+ # This is equal to 1
 
 # There are more functions available in the math library. Here is the sqrt (square root) function:
 from math import sqrt

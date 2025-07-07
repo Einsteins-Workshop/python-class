@@ -4,7 +4,12 @@
 first_leg = int(input("Enter the length of a leg of a right triangle\n"))
 
 # Ask the user for the length of the second leg of the triangle
-
+second_leg = int(input("Enter the length of a leg of a right triangle\n"))
 # Compute and print the area of the triangle (first_leg times second_leg divided by 2)
-
+print(first_leg * second_leg / 2)
 # Compute and print the hypotenuse of the triangle (the square root of the first_leg squared + the second leg squared).
+from math import sqrt
+x=(first_leg * first_leg + second_leg * second_leg)
+print(x)
+square_root=sqrt(x)
+print(square_root)

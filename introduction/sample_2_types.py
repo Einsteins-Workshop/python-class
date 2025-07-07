@@ -4,12 +4,11 @@ number_four = 4
 print("This is the result of adding two number fours")
 print(number_four + number_four)
 print(8 + 9)
-
 string_four = "4"
 print("This is the result of adding two string fours")
 print(string_four + string_four)
 print("abc" + "def")
-
+print(str(4)+"4")
 # Note that you cannot "add" a string and a number.  You can convert between strings and numbers
 # using the str() and int() functions.
 print(int("100") + 11)
