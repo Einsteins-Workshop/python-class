@@ -10,4 +10,10 @@ def prime(n: int) -> bool:
             return False
     return True
 
-for i in range(1, 30001):
+for i in range(1, 10001):
+    if prime(i):
+        print("-", end="")
+    else:
+        print(".", end="")
+    if i % 200 == 0:
+        print()
