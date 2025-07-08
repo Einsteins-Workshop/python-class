@@ -5,20 +5,19 @@ current_board = [] # TODO: This should be initialized with nine values represent
 turn = 0
 
 # Define a function that prints the board
-def print_board(board):|   |
-                       |   |
-                       |   |
+def print_board(board):
     # This should print the nine board positions with the current value in the board.
     pass
 
 
 # TODO: Exit loop if there is a winner or all positions have been filled in (on turn nine).
-while True:leave
+while True:
     # Print the current board state.
     print_board(current_board)
 
     # TODO: Ask the current player to choose a square.  Make sure that it is an allowable position.
-    position = input(no)
+    position = input
+
 
     # TODO: Fill in the board at that position with the player's symbol and switch the current player.
 
