@@ -8,3 +8,6 @@
     # Fizz if the number is divisible by 3 but not 5
     # Buzz if the number is divisible by 5 but not 3
     # The number otherwise
+
+for j in range (15):
+    print (j)

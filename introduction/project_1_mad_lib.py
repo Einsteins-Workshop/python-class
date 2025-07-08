@@ -8,5 +8,5 @@ adjective = input("Enter a adjective")
 noun2 = input("Enter a noun")
 plural_verb = input("Enter a plural verb")
 
-print(noun + " is " + adjective)
+print(noun + " are " + adjective)
 print("while " + noun2 + " " + plural_verb)

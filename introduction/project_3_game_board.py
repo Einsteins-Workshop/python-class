@@ -17,5 +17,97 @@ print(board[6], "|", board[7], "|", board[8])
 square = int(input("What square do you chose?"))
 # Replace the appropriate part of the board list with an "X"
 board[square -1] = "X"
-print(board[square -1])
+print(board)
 # Print the board again with the new X.
+print(board[0], "|", board[1], "|", board[2])
+print("---------")
+# Continue printing the rest of the board
+print(board[3], "|", board[4], "|", board[5])
+print("---------")
+print(board[6], "|", board[7], "|", board[8])
+square = int(input("What square do you chose?"))
+# Replace the appropriate part of the board list with an "X"
+board[square -1] = "o"
+print(board)
+# Print the board again with the new X.
+print(board[0], "|", board[1], "|", board[2])
+print("---------")
+# Continue printing the rest of the board
+print(board[3], "|", board[4], "|", board[5])
+print("---------")
+print(board[6], "|", board[7], "|", board[8])
+square = int(input("What square do you chose?"))
+# Replace the appropriate part of the board list with an "X"
+board[square -1] = "X"
+print(board)
+# Print the board again with the new X.
+print(board[0], "|", board[1], "|", board[2])
+print("---------")
+# Continue printing the rest of the board
+print(board[3], "|", board[4], "|", board[5])
+print("---------")
+print(board[6], "|", board[7], "|", board[8])
+square = int(input("What square do you chose?"))
+# Replace the appropriate part of the board list with an "X"
+board[square -1] = "o"
+print(board)
+# Print the board again with the new X.
+print(board[0], "|", board[1], "|", board[2])
+print("---------")
+# Continue printing the rest of the board
+print(board[3], "|", board[4], "|", board[5])
+print("---------")
+print(board[6], "|", board[7], "|", board[8])
+square = int(input("What square do you chose?"))
+# Replace the appropriate part of the board list with an "X"
+board[square -1] = "X"
+print(board)
+# Print the board again with the new X.
+print(board[0], "|", board[1], "|", board[2])
+print("---------")
+# Continue printing the rest of the board
+print(board[3], "|", board[4], "|", board[5])
+print("---------")
+print(board[6], "|", board[7], "|", board[8])
+square = int(input("What square do you chose?"))
+# Replace the appropriate part of the board list with an "X"
+board[square -1] = "o"
+print(board)
+# Print the board again with the new X.
+print(board[0], "|", board[1], "|", board[2])
+print("---------")
+# Continue printing the rest of the board
+print(board[3], "|", board[4], "|", board[5])
+print("---------")
+print(board[6], "|", board[7], "|", board[8])
+square = int(input("What square do you chose?"))
+# Replace the appropriate part of the board list with an "X"
+board[square -1] = "X"
+print(board)
+# Print the board again with the new X.
+print(board[0], "|", board[1], "|", board[2])
+print("---------")
+# Continue printing the rest of the board
+print(board[3], "|", board[4], "|", board[5])
+print("---------")
+print(board[6], "|", board[7], "|", board[8])
+square = int(input("What square do you chose?"))
+# Replace the appropriate part of the board list with an "X"
+board[square -1] = "o"
+print(board)
+# Print the board again with the new X.
+print(board[0], "|", board[1], "|", board[2])
+print("---------")
+# Continue printing the rest of the board
+print(board[3], "|", board[4], "|", board[5])
+print("---------")
+print(board[6], "|", board[7], "|", board[8])
+print(board)
+# Print the board again with the new X.
+print(board[0], "|", board[1], "|", board[2])
+print("---------")
+# Continue printing the rest of the board
+print(board[3], "|", board[4], "|", board[5])
+print("---------")
+print(board[6], "|", board[7], "|", board[8])
+print("Want to play again?")
