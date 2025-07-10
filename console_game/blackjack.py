@@ -1,3 +1,5 @@
+import random
+
 # First, create an object that represents a deck of cards.
 class Deck:
     def __init__(self):
@@ -17,7 +19,7 @@ class Deck:
 
         # Also, determine whether the deck should be reshuffled. This could be when all cards are dealt,
         # or when the cards get below some preset amount (like 10).
-        pass
+        return self._draw_pile.pop()
 
 
     def discard_card(self, card):
@@ -29,20 +31,41 @@ class Deck:
         pass
 
     def reset(self):
+        self._draw_pile = list(range(52))
         # Create a list representing the deck of all cards not yet dealt out. This should be a set
-        # of values representing a card. The values could be a number from 0 to 51, a string with
+        random.shuffle(self._draw_pile) # of values representing a card. The values could be a number from 0 to 51, a string with
         # rank and suit, are a two element tuple with rank and suit. Make sure to save the deck to self._draw_pile
-        pass
+
+        print(self._draw_pile)
+
 
 
 def card_name(value):
     # Given a card value, return the card name so that it is easy to understand.
-    pass
+    print(f"This is the card name for {value}")
+    print(value//13)
+    print(value % 13)
+    if value // 13 == 0 :
+        suit = 'hearts'
+    elif value // 13 ==1:
+        suit = 'spades'
+    elif value // 13 == 2:
+        suit = 'diamonds'
+    elif value // 13 == 3:
+        suit = 'clovers'
+    print(suit)
 
 def blackjack_value(value):
     # Return the value of the card (1 for ace, 2-10 for other numbers, and 10 for Jack, Queen, and King).
     pass
 
+print(card_name(13))
+deck_of_cards = Deck()
+deck_of_cards.reset()
+card = deck_of_cards.deal_card()
+print(card)
+print(deck_of_cards._draw_pile)
+print(card_name(18))
 # Keep track of players and their current money.
 
 # Loop until players quit.
@@ -54,7 +77,7 @@ def blackjack_value(value):
         # Print out to all players their cards, and the revealed house card.
 
         # Loop among all players
-            # Ask (in a loop) if the player wants to hit (add another card)
+            # Ask (in a loop) if the  player wants to hit (add another card)
                 # If the player wants to hit, deal a card.
                     # If the players hand is over 21 (with aces evaluated as 1), declare that they bust.
                 # If the player does not want to hit, stop that player's loop and go to the next player.
