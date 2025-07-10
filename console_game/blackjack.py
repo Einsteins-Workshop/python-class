@@ -5,14 +5,14 @@ class Deck:
         self._discard = []
 
         # This represents the draw pile
-        self._draw_pile = []
-
-        self.reset()
-
-        pass
-
-    def deal_card(self):
-        # This function should randomly deal a card from the not already dealt cards and remove it
+    # Th        self._draw_pile = []
+        #
+        #         self.reset()
+        #
+        #         pass
+        #
+        #     def deal_card(self):
+        #     is function should randomly deal a card from the not already dealt cards and remove it
         # from the draw pile.  It should return the dealt card.
 
         # Also, determine whether the deck should be reshuffled. This could be when all cards are dealt,
