@@ -55,6 +55,35 @@ def card_name(value):
         suit = 'clovers'
     print(suit)
 
+    if value % 13 == 0:
+        rank = '2'
+    elif value % 13 == 1:
+        rank = '3'
+    elif value % 13 == 2:
+        rank = '4'
+    elif value % 13 == 3:
+        rank = '5'
+    elif value % 13 == 4:
+        rank = '6'
+    elif value % 13 == 5:
+        rank = '7'
+    elif value % 13 == 6:
+        rank = '8'
+    elif value % 13 == 7:
+        rank = '9'
+    elif value % 13 == 8:
+        rank = '10'
+    elif value % 13 == 9:
+        rank = 'Jack'
+    elif value % 13 == 10:
+        rank = 'Queen'
+    elif value % 13 == 11:
+        rank = 'King'
+    elif value % 13 == 10:
+        rank = 'Ace'
+    print(rank + ' of ' + suit)
+    return rank + ' of ' + suit
+
 def blackjack_value(value):
     # Return the value of the card (1 for ace, 2-10 for other numbers, and 10 for Jack, Queen, and King).
     pass

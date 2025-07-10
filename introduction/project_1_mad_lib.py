@@ -3,8 +3,8 @@
 
 # Ask the user for a variety of inputs
 name = input("Enter a name: ")
-plural_noun = input("Enter a verb : ")
-noun = input("Enter a noun: travis ")
+plural_noun = input("enter a food : ")
+noun = input("Enter a noun: school ")
 favoritefood = input("Enter how you feel ")
 
 # Then print your mad lib using the user input
@@ -12,3 +12,4 @@ print("your name is",name)
 print()
 print(f"{noun} is {favoritefood}")
 print("that's good for you.")
+print(f"Hello {'travis'}!")
