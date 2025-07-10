@@ -2,7 +2,7 @@
 # Word list from https://github.com/Vickyabiodun/Hangman-Game/blob/main/hangman_words.py
 
 from random import randint as random
-
+import random
 
 # Get the words
 def get_all_words():
@@ -73,7 +73,7 @@ stages  = ['''
    +---+
    |   |
    O   |
-  /|\  |
+  /|-  |
        |
        |
  =========''', '''
@@ -82,7 +82,7 @@ stages  = ['''
    +---+
    |   |
    O   |
-  /|\  |
+  /|-  |
   /    |
        |
 
@@ -91,8 +91,8 @@ stages  = ['''
    +---+
    |   |
    O   |
-  /|\  |
-  / \  |
+  /|-  |
+  / |  |
        |
 =========''']
 
@@ -100,45 +100,49 @@ stages  = ['''
 # Runs the program
 print("MAIN")
 wrong = ""
-print("/*******\ ")
+print("/*******\\ ")
 print("|HANGMAN|")
-print("\*******/")
+print("\\*******/")
 
 all_words = get_all_words()
 incorrect_letters = 0
+
 # Step 1:  Choose one word from the list of all words. You'll want to find an appropriate
 # function from the random module.  Try searching online.
-word = 'shady'
+word = random.choice(all_words)
+guessed_letters = ['a', 'e', 'i', 'o', 'u']
 
-hword = "_"*len(word)
-guessed_letters = []
 
 while True:
-    # Step 2
-    if "_" not in list(hword):
-        print("WINNER!")
-        print("!!"+"!"*len(word))
-        print("!"+word+"!")
-        print("!!"+"!"*len(word))
-        exit()
+
+
+       #print("WINNER!")
+        #print("!!"+"!"*len(word))
+        #print("!"+word+"!")
+       #print("!!"+"!"*len(word))
+
 
     print(stages[incorrect_letters])
 
     # Step 2: Print the length of the word
-    print("Length: ???")
+    print("Length:" + str(len(word)))
 
     # Step 3: Print the word. Use an _ for each letter that has not yet been
     # guessed successfully.
+
     for letter in word:
-        print('_', end="")
+        if letter in guessed_letters:
+            print(letter, end="")
+        else:
+            print("_", end="")
     print("\n")
 
     # Step 4: Print the guessed letters.
-    print("Guessed letters: ???"+wrong)
+    #print("Guessed letters: ???"+wrong)
 
     # Step 5: Ask the player for a letter.
     letter = 'a'
-
+    choice_letter = input("What letter do you chose?")
     # Step 6: If the letter has already been asked (or is not a valid letter) tell
     # them that they are being naughty.
     if letter == "!":
@@ -160,16 +164,15 @@ while True:
             # Step 11: If the player has too many wrong (more than the number of stages), show
             # them the lose screen and make sure to end the loop
     print("You lose")
-    print("      \            /      ")
-    print("   _   \          /   _   ")
-    print("  | |   \        /   | |  ")
+    print("      \\            /      ")
+    print("   _   \\          /   _   ")
+    print("  | |   \\        /   | |  ")
     print("   -                  -   ")
     print("                          ")
     print("       ____________       ")
-    print("      /            \      ")
+    print("      /            \\      ")
     break
 
     print("\n"*100)
 
 # Step 12: No matter what, at game's end, print out the word
-print("I should print the word to the player here, totally revealed.")

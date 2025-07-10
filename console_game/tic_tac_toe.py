@@ -13,12 +13,7 @@ def print_board(board):
     print(board[6], "|", board[7], "|", board[8])
 
 
-
-
 while True:
-
-
-
 
 
     if (current_board[0] == current_board[1]) and (current_board[0] == current_board[2]):
