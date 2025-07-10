@@ -36,4 +36,4 @@ if __name__ == '__main__':
     test_file = Path('test.jpg')
     is_bird, _, probability = learn.predict(test_file)
     print(f"This is a: {is_bird}.")
-    print(f"Probability it's a bird: {probability[0]:.4f}")
+    print(f"Probability it's a blue flower: {probability[0]:.4f}")

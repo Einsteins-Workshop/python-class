@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
 
     # Create the training data set, which will consist of up to 200 images resulting from searches on forest and birds
-    image_categories = ['forest', 'bird']
+    image_categories = ['blue flower', 'red flower']
     path = Path('bird_or_not')
 
     if not path.exists():
@@ -54,6 +54,7 @@ if __name__ == '__main__':
     for image_type in image_categories:
         test_directory = path / image_type  # This is a special operator for Path objects, which creates a subdirectory
         test_directory.mkdir(exist_ok=True) # Create the subdirectory with the image category
+
 
         results = get_images(f"{image_type} photo", max_results=200)
         download_images(results, test_directory)
