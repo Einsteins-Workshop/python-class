@@ -1,4 +1,4 @@
-   # Look at sample_4_input_output.py for example statements
+      # Look at sample_4_input_output.py for example statements
 player = "X"
 current_board = []
 # We are going to print a tic-tac-toe board

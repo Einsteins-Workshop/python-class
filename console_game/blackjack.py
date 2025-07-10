@@ -1,3 +1,4 @@
+import random
 # First, create an object that represents a deck of cards.
 class Deck:
     def __init__(self):
@@ -12,12 +13,16 @@ class Deck:
         pass
 
     def deal_card(self):
+
+        return self._draw_pile.pop()
+
+
         # This function should randomly deal a card from the not already dealt cards and remove it
         # from the draw pile.  It should return the dealt card.
 
         # Also, determine whether the deck should be reshuffled. This could be when all cards are dealt,
         # or when the cards get below some preset amount (like 10).
-        pass
+
 
 
     def discard_card(self, card):
@@ -32,20 +37,50 @@ class Deck:
         # Create a list representing the deck of all cards not yet dealt out. This should be a set
         # of values representing a card. The values could be a number from 0 to 51, a string with
         # rank and suit, are a two element tuple with rank and suit. Make sure to save the deck to self._draw_pile
-        pass
+        self._draw_pile = (list(range(52)))
+        random.shuffle(self._draw_pile)
+
+
 
 
 def card_name(value):
-    # Given a card value, return the card name so that it is easy to understand.
-    pass
+    print(f"Here is the value for {value}")
+    print(value // 13)
+
+    if value // 13 == 0:
+      suit = "spades"
+    elif value // 13 == 1:
+      suit = "clubs"
+    elif value // 13 == 2:
+      suit =  "hearts"
+    elif value // 13 == 3:
+      suit =  "diamonds"
+    print(suit)
+
+
+
 
 def blackjack_value(value):
-    # Return the value of the card (1 for ace, 2-10 for other numbers, and 10 for Jack, Queen, and King).
-    pass
 
-# Keep track of players and their current money.
 
-# Loop until players quit.
+
+
+
+
+          pass
+
+
+deck_of_cards = Deck()
+deck_of_cards.reset()
+print(deck_of_cards._draw_pile)
+card = deck_of_cards.deal_card()
+
+print(deck_of_cards.deal_card())
+print(card_name(card))
+print(deck_of_cards._draw_pile)
+# Keep trackfof players and their current money.
+
+# Loop untilfplayers quit.
     # Print out the current players money totals.
     # Ask if players want another hand
         # If players want to play, deal two cards to each player and to the house. Make sure that one
