@@ -8,8 +8,8 @@ def output(txt: str):
 
 # try not to edit these two lines unless you seriously know what you're doing
 with open("Despicible_Me.txt", "r") as f:
-    Despicible_Me = ""
-    for _ in range(99434):
+    Despicible_Me = "`"
+    for _ in range(40037):
         try:
             Despicible_Me += f.read(1)
         except UnicodeDecodeError:
