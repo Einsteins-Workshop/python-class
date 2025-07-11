@@ -37,7 +37,7 @@ def show_hand(name, hand, hide_first=False):
 
 # Betting and game loop
 def play_blackjack():
-    chips = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999  # Starting chips
+    chips = 100  # Starting chips
     print("🎲 Welcome to Blackjack with Betting!")
     print(f"You start with ${chips} in chips.")
 

@@ -60,7 +60,7 @@ def computer_bet(cash, player_bet):
 
 def poker_game():
     player_cash = 1000000000000000000000000000000000000000000000000
-    computer_cash = 1
+    computer_cash = 100000000000000000000000000000000000000000000
 
     while player_cash > 0 and computer_cash > 0:
         print("\n--- New Round ---")

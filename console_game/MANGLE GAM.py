@@ -1,39 +1,104 @@
+import os
 import random
-import time
 
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
-def mingle_game(players):
-    round_num = 1
+def print_grid(grid):
+    for row in grid:
+        print(" ".join(row))
+    print()
 
-    while len(players) > 1:
-        print(f"\n--- Round {round_num} ---")
-        print(f"Players left: {len(players)}")
-        print("Mingle! Mingle! Mingle!")
-        time.sleep(2)
+def get_move():
+    move = input("Move (w/a/s/d) or 'q' to quit: ").lower()
+    while move not in ['w','a','s','d','q']:
+        move = input("Invalid input. Move (w/a/s/d) or 'q' to quit: ").lower()
+    return move
 
-        random.shuffle(players)
-        pairs = []
-        eliminated = None
+def mingle_game():
+    clear()
+    print("=== 🦑 Squid Game: Mingle Game ===")
+    print("You are 'P' - move to find the secret Target among NPCs (N).")
+    print("You have 15 moves to find the Target.\n")
+    input("Press Enter to start...")
 
-        if len(players) % 2 == 1:
-            eliminated = players.pop()
-            print(f"{eliminated} couldn't find a partner and is ELIMINATED!")
+    size = 7
+    grid = [['.' for _ in range(size)] for _ in range(size)]
 
-        for i in range(0, len(players), 2):
-            pair = (players[i], players[i + 1])
-            pairs.append(pair)
-            print(f"Paired: {pair[0]} ❤️ {pair[1]}")
+    # Place player
+    player_pos = [size//2, size//2]
+    grid[player_pos[0]][player_pos[1]] = 'P'
 
-        if eliminated:
-            players = [player for player in players if player != eliminated]
+    # Place NPCs (10 random positions, no overlap)
+    npc_positions = []
+    while len(npc_positions) < 10:
+        pos = [random.randint(0,size-1), random.randint(0,size-1)]
+        if pos != player_pos and pos not in npc_positions:
+            npc_positions.append(pos)
+            grid[pos[0]][pos[1]] = 'N'
 
-        round_num += 1
-        time.sleep(2)
+    # Choose target NPC randomly
+    target_pos = random.choice(npc_positions)
 
-    print(f"\n🎉 WINNER: {players[0]} 🎉")
+    moves_left = 15
 
+    while moves_left > 0:
+        clear()
+        print(f"Moves left: {moves_left}")
+        print_grid(grid)
 
-# Example player list
-players = ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5", "Player 6", "Player 7"]
+        move = get_move()
+        if move == 'q':
+            print("You quit the game. Bye!")
+            break
 
-mingle_game(players)
+        # Calculate new position
+        new_pos = player_pos.copy()
+        if move == 'w' and player_pos[0] > 0:
+            new_pos[0] -= 1
+        elif move == 's' and player_pos[0] < size-1:
+            new_pos[0] += 1
+        elif move == 'a' and player_pos[1] > 0:
+            new_pos[1] -= 1
+        elif move == 'd' and player_pos[1] < size-1:
+            new_pos[1] += 1
+        else:
+            print("Can't move there!")
+            input("Press Enter to continue...")
+            continue
+
+        # Move player
+        # Clear old position
+        grid[player_pos[0]][player_pos[1]] = '.'
+
+        # If new pos is NPC, ask if player wants to guess
+        if new_pos in npc_positions:
+            clear()
+            print_grid(grid)
+            print(f"You found an NPC at position {new_pos}!")
+            guess = input("Is this the Target? (y/n): ").lower()
+            if guess == 'y':
+                if new_pos == target_pos:
+                    print("\n🎉 You found the Target! You win the Mingle Game!")
+                    return
+                else:
+                    print("\n❌ Wrong! This NPC is NOT the Target.")
+                    moves_left -= 2  # penalty for wrong guess
+                    input("Press Enter to continue...")
+            else:
+                print("\nYou chose not to guess.")
+                input("Press Enter to continue...")
+
+        # Place player in new position
+        grid[new_pos[0]][new_pos[1]] = 'P'
+        player_pos = new_pos
+
+        moves_left -= 1
+
+    clear()
+    print("⏰ Time's up! You failed to find the Target.")
+    print(f"The Target was at position {target_pos}.")
+    print("Game Over!")
+
+if __name__ == "__main__":
+    mingle_game()
