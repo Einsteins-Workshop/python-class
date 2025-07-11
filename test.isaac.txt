@@ -1,0 +1,29 @@
+1 second pauses\:
+
+(0.05s groups).................... Done\!
+(0.25s groups);;;; Done\!
+(1s groups): Done\!
+
+Getting your input\.\.\.>
+<
+Getting your input again\.\.\.?
+<
+
+
+
+
+
+
+
+Now to explode\:
+
+In 3\.\.\.:
+2\.\.\.:
+1\.\.\.:
+
+
+
+
+
+
+!
