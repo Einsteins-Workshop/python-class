@@ -42,7 +42,7 @@ def show_hand(hand, name, hide_first=False):
 
 # Main Game Loop
 def play_blackjack():
-    money = 1000
+    money = 10000000000000000000000000000000000000000000000000000000000000000000000000
     print("=== Welcome to Blackjack ===")
     print(f"Starting Balance: ${money}")
 
