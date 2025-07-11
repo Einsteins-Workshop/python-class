@@ -1,26 +1,96 @@
-# First, we want to keep track of the current player, the turn, and the board.  I recommend storing the
-# board as a list of nine elements, each keeping track of one of the positions in the 3x3 board
+1
+
 player = "X"
-current_board = [] # TODO: This should be initialized with nine values represent the symbol to choose that square.
+current_board = []
+
+board=[0,1,2,3,4,5,6,7,8,9]
 turn = 0
-
-# Define a function that prints the board
 def print_board(board):
-    # This should print the nine board positions with the current value in the board.
-    pass
 
 
-# TODO: Exit loop if there is a winner or all positions have been filled in (on turn nine).
-while True:
-    # Print the current board state.
-    print_board(current_board)
+    print(board[1], "|", board[2], "|", board[3])
+    print("---------")
+    print(board[4], "|", board[5], "|", board[6])
+    print("---------")
+    print(board[7], "|", board[8], "|", board[9])
+def check_win(board2):
 
-    # TODO: Ask the current player to choose a square.  Make sure that it is an allowable position.
-    position = input()
+    if (board2 [3] == board2 [5]) and (board2 [5] == board2 [7]):
+        print("You won.")
+    elif (board2 [1] == board2 [5]) and (board2 [5] == board2 [9]):
+        print("You won.")
+    elif (board2 [1] == board2 [2]) and (board2 [2] == board2 [3]):
+        print("You won.")
+    elif (board2 [4] == board2 [5]) and (board2 [5] == board2 [6]):
+        print("You won.")
+    elif (board2 [7] == board2 [8]) and (board2 [8] == board2 [9]):
+        print("You won.")
+    elif (board2 [1] == board2 [4]) and (board2 [4] == board2 [7]):
+        print("You won.")
+    elif (board2 [2] == board2 [5]) and (board2 [5] == board2 [8]):
+        print("You won.")
+    elif (board2 [3] == board2 [6]) and (board2 [6] == board2 [9]):
+        print("You won.")
 
-    # TODO: Fill in the board at that position with the player's symbol and switch the current player.
 
-    # TODO: Check to see if there are is a winner by checking all eight possible three in a row options. If
-    # there is a three in a row, declare that player the winner and make sure to exit the loop.
 
-    # TODO: If turn 9 is passed, declare the game a draw and exit the loop.
+print_board(board)
+check_win(board)
+
+
+square = int(input("choose a number to put a number."))
+board[square] = "X"
+
+print_board(board)
+check_win(board)
+
+
+square2 = int(input("choose a number to put a number."))
+board[square2] = "O"
+
+print_board(board)
+check_win(board)
+
+square = int(input("choose a number to put a number."))
+board[square] = "X"
+
+print_board(board)
+check_win(board)
+
+square2 = int(input("choose a number to put a number."))
+board[square2] = "O"
+
+print_board(board)
+check_win(board)
+
+
+square = int(input("choose a number to put a number."))
+board[square] = "X"
+
+print_board(board)
+check_win(board)
+
+square2 = int(input("choose a number to put a number."))
+board[square2] = "O"
+
+print_board(board)
+
+
+square = int(input("choose a number to put a number."))
+board[square] = "X"
+
+print_board(board)
+check_win(board)
+
+square2 = int(input("choose a number to put a number."))
+board[square2] = "O"
+
+print_board(board)
+check_win(board)
+
+
+square = int(input("choose a number to put a number."))
+board[square] = "X"
+
+print_board(board)
+check_win(board)

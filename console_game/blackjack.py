@@ -1,4 +1,10 @@
+
 import random
+
+print('WELCOME TO BLACKJACK')
+
+my_list = [1,2,3,4,5,6,7,8,9,10,11,12]
+
 # First, create an object that represents a deck of cards.
 class Deck:
     def __init__(self):
@@ -13,6 +19,8 @@ class Deck:
         pass
 
     def deal_card(self):
+        if len(self._draw_pile) == 0:
+            self.reset()
 
         return self._draw_pile.pop()
 
@@ -44,8 +52,7 @@ class Deck:
 
 
 def card_name(value):
-    print(f"Here is the value for {value}")
-    print(value // 13)
+
 
     if value // 13 == 0:
       suit = "spades"
@@ -55,70 +62,139 @@ def card_name(value):
       suit =  "hearts"
     elif value // 13 == 3:
       suit =  "diamonds"
-    print(suit)
+
+
+    rank = blackjack_value(value)
+
+    return(rank + f" of {suit}")
 
 
 
 
 def blackjack_value(value):
 
+    if value % 13 == 0:
+        rank = "2"
+    elif value % 13 == 1:
+        rank = "3"
+    elif value % 13 == 2:
+        rank = "4"
+    elif value % 13 == 3:
+        rank = "5"
+    elif value % 13 == 4:
+        rank = "6"
+    elif value % 13 == 5:
+        rank = "7"
+    elif value % 13 == 6:
+        rank = "8"
+    elif value % 13 == 7:
+        rank = "9"
+    elif value % 13 == 8:
+        rank = "10"
+    elif value % 13 == 9:
+        rank = "jack"
+    elif value % 13 == 10:
+        rank = "queen"
+    elif value % 13 == 11:
+        rank = "king"
+    elif value % 13 == 12:
+        rank = "ace"
 
+    return (rank)
 
+def card_score(rank):
+    value = rank
+    if rank =='jack':
+        value = 10
+    elif rank == 'queen':
+        value = 10
 
+    elif rank == 'king':
+        value = 10
 
+    elif rank == 'ace':
+        value = 1
+    else:
+        value = int(rank)
+    return value
 
-          pass
+def total_score(hand):
+    aces = 0
+    total = 0
+    for card in hand:
+        value = card_score(blackjack_value(card))
+        total = total + value
+        if value == 1:
+            aces = aces + 1
+    if (total < 12) and (aces > 0):
+        total = total + 10
+    return total
 
 
 deck_of_cards = Deck()
 deck_of_cards.reset()
-print(deck_of_cards._draw_pile)
-card = deck_of_cards.deal_card()
+#for my_card in hand:
+##    print(card_name(my_card))
+ #   value = blackjack_value(my_card)
+#    score = card_score(value)
+ #   print(score)
 
-print(deck_of_cards.deal_card())
-print(card_name(card))
-print(deck_of_cards._draw_pile)
-# Keep trackfof players and their current money.
+chips = 100
+while True:
+    print(f"you have {chips}")
+    if chips == 0:
+        break
+    play_again = input('want to play again (y/n)')
+    if play_again == "n":
+        print('nice job')
+        break
+    bet = 0
+    while (bet <= 0) or (bet > chips):
+        bet = int(input('how much do you want to bet'))
 
-# Loop untilfplayers quit.
-    # Print out the current players money totals.
-    # Ask if players want another hand
-        # If players want to play, deal two cards to each player and to the house. Make sure that one
-        # of the house cards is marked as hidden, and the other as shown.
+    card = deck_of_cards.deal_card()
+    card2 = deck_of_cards.deal_card()
+    card3 = deck_of_cards.deal_card()
+    card4 = deck_of_cards.deal_card()
+    dealer_hand = [card , card2]
+    your_hand = [card3 , card4]
+    print(f'dealers cards hidden , {card_name(card2)}')
+    print(f'your cards {card_name(card3)} , {card_name(card4)}')
+    print(total_score(your_hand))
+    while total_score(your_hand) < 21:
+        hit = input('want to hit or stand (h/s)')
+        if hit == "h":
+            new_card = deck_of_cards.deal_card()
+            your_hand.append(new_card)
 
-        # Print out to all players their cards, and the revealed house card.
+            print(f'Your hand is: {" ".join([card_name(x) for x in your_hand])}')
+            print(total_score(your_hand))
+        elif hit == 's':
+            break
 
-        # Loop among all players
-            # Ask (in a loop) if the player wants to hit (add another card)
-                # If the player wants to hit, deal a card.
-                    # If the players hand is over 21 (with aces evaluated as 1), declare that they bust.
-                # If the player does not want to hit, stop that player's loop and go to the next player.
-
-        # Reveal the house's hidden card.
-
-        # If any player has not bust, do the dealer's play:
-        # Deal (preferrably with a second of delay between cards) more cards to the dealer until
-        # the dealer's total is 17 or more, with aces counted as 11 if it brings the total between 17-21
-        # and 1 otherwise.
-
-        # Resolve all hands. Two card blackjacks automatically win, player busts automatically lose, if
-        # the dealer busts, all non-busted players win, and otherwise anyone who has a higher total than
-        # the dealer wins, lower totals lose, and tied totals draw. Update all player money totals.
-
-        # Put in the discard pile all cards that have been dealt to the players and the house.
-
-# Other things to add:
-# 1. Player blackjack hands (starting with an Ace and a 10, J, Q, or K) should result in an automatic win
-# and 50% extra
-# 2. Allow players to doube down when their starting total is 9, 10, or 11. They get exactly one dealt card,
-# and win or lose double as normal
-# 3. Allow players insurance-- if the dealer has an ace, all players may opt for insurance.  Anyone can pay
-# half the bet for insurance. Then, check the dealer's hidden card. If it is 10, J, Q, or K, then anyone
-# who has paid for insurance wins a full bet (basically are even for the hand), and anyone without a
-# blackjack automatically loses. If the hidden card is not a 10, J, Q, or K, play continues as before and
-# anyone who paid for insurance pays the half bet.
-# 4. Splitting pairs-- if a player has a pair of the same denomination, they may split the cards into
-# two separate hands with a full separate bet. Each hand is resolved in the normal way unless the player
-# started with aces. Split aces only allow for a single card (for a total of two), and they do not get the
-# blackjack bonus if they hit an ace-ten.
-
+    end_player_score = total_score(your_hand)
+    if end_player_score > 21:
+        print(f"you busted with score {total_score(your_hand)}")
+        chips = chips - bet
+    elif (end_player_score == 21) and len(your_hand) == 2:
+        print('you got black jack')
+        chips = chips + bet + bet
+    else:
+        while total_score(dealer_hand) < 17:
+            new_card = deck_of_cards.deal_card()
+            dealer_hand.append(new_card)
+            print(f'dealer hand is: {" ".join([card_name(x) for x in dealer_hand])}')
+        end_dealer_score = total_score(dealer_hand)
+        if end_dealer_score > 21:
+            print(f"the dealer busted with score {end_dealer_score}")
+            chips = chips + bet
+        elif end_player_score > end_dealer_score:
+            print(f"you won")
+            print(f"the dealers score was {end_dealer_score}")
+            print(f'your score was {end_player_score}' )
+            chips = chips + bet
+        else:
+            print("you lost")
+            print(f"the dealers score was {end_dealer_score}")
+            print(f'your score was {end_player_score}')
+            chips = chips - bet

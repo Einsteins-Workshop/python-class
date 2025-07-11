@@ -1,6 +1,9 @@
 #Lists are a sequence of objects, and are created by putting items inside []
 my_list = [1,4,6,8]
-
+a= "foo"
+b="bar"
+c = [a,b]
+print(c)
 # You can add things to a list with the append method.
 print(f"The initial list is {my_list}")
 my_list.append(7)

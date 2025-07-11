@@ -1,8 +1,7 @@
-      # Look at sample_4_input_output.py for example statements
+
 player = "X"
 current_board = []
-# We are going to print a tic-tac-toe board
-# First, store the board state in a list
+
 board=[0,1,2,3,4,5,6,7,8,9]
 turn = 0
 def print_board(board):
@@ -32,9 +31,7 @@ def check_win(board2):
     elif (board2 [3] == board2 [6]) and (board2 [6] == board2 [9]):
         print("You won.")
 
-#while True:
-   # print_board(current_board)
-    #position = input()
+
 
 print_board(board)
 check_win(board)
