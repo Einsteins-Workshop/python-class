@@ -1,4 +1,4 @@
-# See https://usaco.org/index.php?page=viewproblem2&cpid=94
+# See https://usaco.org/index.php?page=viewproble2m&cpid=94
 
 # Problem 1: Hay Bales [Brian Dean, 2011]
 #
@@ -33,7 +33,7 @@
 #
 # OUTPUT FORMAT:
 #
-#* Line 1: An integer giving the minimum number of hay bales that need
+# * Line 1: An integer giving the minimum number of hay bales that need
 #        to be moved to restore the piles to having equal heights.
 #
 # SAMPLE OUTPUT (file haybales.out):
@@ -43,7 +43,34 @@
 # Fill out the following function, which should return the correct answer for a file with
 # the correct input file format.
 def determine_solution(file_name):
-    return 7
+
+    input_list = [4, 2, 10, 7, 1]
+    active_pile = 0
+
+    while True:
+        print(input_list)
+        for i in range(len(input_list) - 1):
+
+            if input_list[i] < input_list[i+1]:
+                input_list[i], input_list[i+1] = input_list[i+1], input_list[i]
+
+            for j in range(len(input_list) - 1):
+
+                if input_list[j] == input_list[j+1]:
+                    active_pile = j+1
+                    print(active_pile)
+                    break
+
+        input_list[active_pile] = input_list[active_pile] - 1
+        input_list[len(input_list) - 1] = input_list[len(input_list) - 1] + 1
+
+        if active_pile == len(input_list):
+            return input_list
+
+def better_solution(file_name):
+
+    input_list = [4, 2, 10, 7, 1]
+
 
 
 # Proper format to be evaluated by USACO
