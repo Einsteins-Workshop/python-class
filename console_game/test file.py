@@ -1,0 +1,12 @@
+color=input("pink")
+noun=input("table")
+plural_noun=("doors")
+noun_2=("wall")
+person_1=("bob the builder")
+person_2=("kung fu panda")
+verb=("pooping")
+
+print("This is ", person_1)
+print(person_1+ "favorite color is", color)
+print(person_1+"s best friend is",+ person_2)
+print("They both like staring at",)

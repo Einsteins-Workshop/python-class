@@ -2,10 +2,10 @@
 # Look at sample_1_input_output.py for example statements
 
 # Ask the user for a variety of inputs
-color = input("Enter a color: ")
-plural_noun = input("Enter a plural noun: ")
-noun = input("Enter a noun: ")
-adjective = input("Enter an adjective")
+color = input("pink: ")
+plural_noun = input("houses: ")
+noun = input("cabinets: ")
+adjective = input("Stinky")
 
 # Then print your mad lib using the user input
 print("Roses are ", color)
