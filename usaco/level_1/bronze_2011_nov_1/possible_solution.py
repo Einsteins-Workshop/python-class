@@ -52,6 +52,7 @@ def determine_solution(file_name):
         hour = int(first_line[1])
         minute = int(first_line[2])
 
+
     start_minutes = 11 * 24 * 60 + 11 * 60 + 11
     end_minutes = day * 24 * 60 + hour * 60 + minute
     if end_minutes < start_minutes:

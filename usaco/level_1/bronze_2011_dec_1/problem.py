@@ -42,7 +42,7 @@
 
 # Fill out the following function, which should return the correct answer for a file with
 # the correct input file format.
-def determine_solution(file_name):
+def worse_solution(file_name):
 
     input_list = [4, 2, 10, 7, 1]
     active_pile = 0
@@ -67,14 +67,33 @@ def determine_solution(file_name):
         if active_pile == len(input_list):
             return input_list
 
-def better_solution(file_name):
+def determine_solution(file_name):
 
-    input_list = [4, 2, 10, 7, 1]
+    with open(file_name, 'r') as file:
+        num_piles = int(file.readline().rstrip())
+        bales = []
+        average = 0
+        bales_sum = 0
+        answer = 0
+
+        for i in range(num_piles):
+            bales.append(int(file.readline().rstrip()))
+            bales_sum = bales_sum + bales[i]
+
+        average = bales_sum / num_piles
+
+        for i in range(num_piles):
+            if bales[i] > average:
+                answer = answer + bales[i] - average
+        return int(answer)
+
+
+
+
 
 
 
 # Proper format to be evaluated by USACO
-# with open("haybales.out", "w") as f:
 #    f.write(str(determine_solution("haybales.in")))
 #    exit()
 
