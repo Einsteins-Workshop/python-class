@@ -9,4 +9,4 @@ while True:
         event, values = window.read(timeout=interframe_duration)
         if event == sg.WIN_CLOSED:
             exit(0)
-        window['-IMAGE-'].update(data=ImageTk.PhotoImage(frame) )
+        window['-IMAGE-'].update(data=ImageTk.PhotoImage(frame) ) 
