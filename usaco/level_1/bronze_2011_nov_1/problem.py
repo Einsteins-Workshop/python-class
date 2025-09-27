@@ -46,8 +46,28 @@
 # Fill out the following function, which should return the correct answer for a file with
 # the correct input file format.
 def determine_solution(file_name):
-    with open(file_name, "r"):
-        
+    with open(file_name, "r") as file:
+
+        raw_list = file.readline().rstrip().split(" ")
+        end_day = int(raw_list[0])
+        end_hour = int(raw_list[1])
+        end_minute = int(raw_list[2])
+
+        start_day = 11
+        start_hour = 11
+        start_minute = 11
+
+        end_minutes = ((end_day * 24) * 60) + (end_hour * 60) + end_minute
+        start_minutes = ((start_day * 24) * 60) + (start_hour * 60) + start_minute
+
+        if start_minutes > end_minutes:
+            return -1
+
+        return (end_minutes -  start_minutes)
+
+
+
+
 
 
 # Proper format to be evaluated by USACO

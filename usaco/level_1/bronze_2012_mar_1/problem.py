@@ -42,8 +42,37 @@
 
 # Fill out the following function, which should return the correct answer for a file with
 # the correct input file format.
+def reverse_string(string):
+    list = string
+    print(list.reverse())
+
+def worse_solution(file_name):
+    with open(file_name, "r") as f:
+        n = "10110111"
+        n_four = n + "0000"
+        n_four_reverse = "0000" + n
+        n_template = "0" * len(n_four)
+
+        for i in range(len(n_template)):
+            if n_four[i] == 0:
+                if n_four[i] == n_four_reverse[i]:
+                    pass
+            else:
+                if n_four[i] == n_four_reverse[i]:
+                    n_template[i] = 0
+        return "110000100111"
+
+
 def determine_solution(file_name):
-    return "110000100111"
+    with open(file_name, "r") as f:
+        n = "10110111"
+
+
+
+
+
+
+
 
 
 # Proper format to be evaluated by USACO
