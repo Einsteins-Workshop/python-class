@@ -1,0 +1,66 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+The label example_game_dialog is defined twice, at File "game/example_script.rpy", line 5:
+label example_game_dialog:
+and File "game/script.rpy", line 7:
+label example_game_dialog:
+
+
+The label example_game_images is defined twice, at File "game/example_script.rpy", line 15:
+label example_game_images:
+and File "game/script.rpy", line 17:
+label example_game_images:
+
+
+The label example_game_sounds is defined twice, at File "game/example_script.rpy", line 63:
+label example_game_sounds:
+and File "game/script.rpy", line 65:
+label example_game_sounds:
+
+
+The label example_game_choices is defined twice, at File "game/example_script.rpy", line 75:
+label example_game_choices:
+and File "game/script.rpy", line 77:
+label example_game_choices:
+
+
+The label choice1 is defined twice, at File "game/example_script.rpy", line 78:
+menu choice1:
+and File "game/script.rpy", line 80:
+menu choice1:
+
+
+The label choice1_pikachu is defined twice, at File "game/example_script.rpy", line 83:
+label choice1_pikachu:
+and File "game/script.rpy", line 85:
+label choice1_pikachu:
+
+
+The label choice1_squirtle is defined twice, at File "game/example_script.rpy", line 89:
+label choice1_squirtle:
+and File "game/script.rpy", line 91:
+label choice1_squirtle:
+
+
+The label choice1_done is defined twice, at File "game/example_script.rpy", line 95:
+label choice1_done:
+and File "game/script.rpy", line 97:
+label choice1_done:
+
+
+The label example_interpolation is defined twice, at File "game/example_script.rpy", line 105:
+label example_interpolation:
+and File "game/script.rpy", line 107:
+label example_interpolation:
+
+
+The label name_display is defined twice, at File "game/example_script.rpy", line 112:
+label name_display:
+and File "game/script.rpy", line 114:
+label name_display:
+
+
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Tue May 13 17:41:48 2025
