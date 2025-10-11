@@ -66,7 +66,20 @@
 
 # Fill out the following function, which should return the correct answer for a file with
 # the correct input file format.
-def determine_solution(file_handle):
+def determine_solution(file_name):
+    cow_likes = []
+    cow_headers = []
+    cow_dict = dict
+    with open(file_name,"r") as f:
+        lines =
+        line_amount = sum(1 for lines in f)
+        for i in range(line_amount):
+            if not i % 2 and not i == 1:
+                cow_likes.append(f.readline())
+            if i % 2:
+                cow_headers.append(f.readline())
+
+        print(cow_headers, cow_likes)
     return "2\n-1\n1 2\n3\n-1\n"
 
 
@@ -82,7 +95,7 @@ for case in range(1, 16):
         formatted_correct_answer = correct_answer.replace("\n", ' ')
         print(f"For file {input_file_name} the correct answer is {formatted_correct_answer}")
         print(f"Working on {input_file_name}")
-        your_answer = determine_solution(open(input_file_name, 'r'))
+        your_answer = determine_solution(input_file_name)
         if correct_answer != your_answer:
             formatted_your_answer = your_answer.replace("\n", " ")
             print(f"Your answer of {formatted_your_answer} is not correct, try again.")

@@ -65,15 +65,12 @@ def worse_solution(file_name):
 
 def determine_solution(file_name):
     with open(file_name, "r") as f:
-        n = "10110111"
+        n = f.readline().strip()
+        n_decimal = int(n,2)*17
 
+        n_result = format(n_decimal,"b")
 
-
-
-
-
-
-
+        return n_result
 
 # Proper format to be evaluated by USACO
 # with open("times17.out", "w") as f:
