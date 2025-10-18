@@ -15,8 +15,14 @@ print(board[6], "|", board[7], "|", board[8])
 # Continue printing the rest of the board
 
 # Ask the user for a square
-
+square=input("Enter a square: ")
 # Replace the appropriate part of the board list with an "X"
+if (square == "1"):
+    print(board["square"], "|", board[1], "|", board[2])
+    print("---------")
+    print(board[3], "|", board[4], "|", board[5])
+    print("---------")
+    print(board[6], "|", board[7], "|", board[8])
 
 # Print the board again with the new X.
 
