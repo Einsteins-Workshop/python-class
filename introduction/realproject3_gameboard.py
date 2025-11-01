@@ -88,3 +88,59 @@ print("---------")
 
 print(board[6], "|", board[7], "|", board[8])
 print("---------")
+
+square_6 = input("Type in a number from 1-9, except any of the numbers that have been chosen before: ")
+# Ask the user for a square
+
+board[int(square_6)-1]="O"
+
+print(board[0], "|", board[1], "|", board[2])
+print("---------")
+# Continue printing the rest of the board
+print(board[3], "|", board[4], "|", board[5])
+print("---------")
+
+print(board[6], "|", board[7], "|", board[8])
+print("---------")
+
+square_7 = input("Type in a number from 1-9, except any of the numbers that have been chosen before: ")
+# Ask the user for a square
+
+board[int(square_7)-1]="X"
+
+print(board[0], "|", board[1], "|", board[2])
+print("---------")
+# Continue printing the rest of the board
+print(board[3], "|", board[4], "|", board[5])
+print("---------")
+
+print(board[6], "|", board[7], "|", board[8])
+print("---------")
+
+square_8 = input("Type in a number from 1-9, except any of the numbers that have been chosen before: ")
+# Ask the user for a square
+
+board[int(square_8)-1]="O"
+
+print(board[0], "|", board[1], "|", board[2])
+print("---------")
+# Continue printing the rest of the board
+print(board[3], "|", board[4], "|", board[5])
+print("---------")
+
+print(board[6], "|", board[7], "|", board[8])
+print("---------")
+
+square_9 = input("Type in a number from 1-9, except any of the numbers that have been chosen before: ")
+# Ask the user for a square
+
+board[int(square_9)-1]="X"
+
+print(board[0], "|", board[1], "|", board[2])
+print("---------")
+# Continue printing the rest of the board
+print(board[3], "|", board[4], "|", board[5])
+print("---------")
+
+print(board[6], "|", board[7], "|", board[8])
+print("---------")
