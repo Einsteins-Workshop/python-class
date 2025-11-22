@@ -305,7 +305,8 @@ elif Choice == ("C5"):
 
       print("Olivia: I didn’t mean anything by it. I’m glad he’s coming. I just don’t wanna give people one more reason to call us “losers”. I’m getting tired of it. I’m tired of being a laughingstock.")
 
-elif Choice == (C6)
+
+elif Choice == ("C6"):
       print("Jesse: Embrace being a loser, Olivia. If you do that, you can be anything you wanna be!")
 
       print("Olivia: What if I wanna be a winner?")
