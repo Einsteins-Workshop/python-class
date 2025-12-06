@@ -2,7 +2,13 @@ from PIL import Image
 
 import webbrowser
 
+import numpy
+
 Mariokart8_Character_want = input("Type stuff to find Mario things or enter number 1-44 for a mariokart 8 character:")
+
+if Mariokart8_Character_want == ("Random"):
+                num = numpy.random.randint(43)
+                num=+1
 
 if Mariokart8_Character_want.isnumeric():
 
@@ -160,41 +166,32 @@ else:
         if Mariokart8_Character_want ==("SuperMarioFanGame"):
                  Google_path = "https://scratch.mit.edu/projects/216123417"
 
-        else:
-                if Mariokart8_Character_want == ("MarioFacts"):
-                        Google_path = "https://www.youtube.com/switchstop"
+        elif Mariokart8_Character_want == ("MarioFacts"):
+                 Google_path = "https://www.youtube.com/switchstop"
 
-                else:
-                        if Mariokart8_Character_want == ("MarioNews"):
-                                 Google_path = "https://mario.nintendo.com/news/"
+        elif Mariokart8_Character_want == ("MarioNews"):
+                Google_path = "https://mario.nintendo.com/news/"
 
-                        else:
-                                if Mariokart8_Character_want == ("MarioTier"):
-                                        Google_path = "https://tiermaker.com/categories/mario"
+        elif Mariokart8_Character_want == ("MarioTier"):
+                Google_path = "https://tiermaker.com/categories/mario"
 
-                                else:
-                                        if Mariokart8_Character_want == ("MarioKahoot"):
-                                                 Google_path = "https://create.kahoot.it/details/super-mario-bros/83a5d10e-b23e-470a-899b-62c7c8e1089c"
+        elif Mariokart8_Character_want == ("MarioKahoot"):
+                Google_path = "https://create.kahoot.it/details/super-mario-bros/83a5d10e-b23e-470a-899b-62c7c8e1089c"
 
-                                        else:
-                                                if Mariokart8_Character_want == ("MarioOldGame"):
-                                                        Google_path = "https://scratch.mit.edu/projects/196684240"
+        elif Mariokart8_Character_want == ("MarioOldGame"):
+                Google_path = "https://scratch.mit.edu/projects/196684240"
 
-                                                else:
-                                                        if Mariokart8_Character_want == ("MarioLevelUpGame"):
-                                                                Google_path = "https://bookwormkevin.itch.io/lummm"
+        elif Mariokart8_Character_want == ("MarioLevelUpGame"):
+                Google_path = "https://bookwormkevin.itch.io/lummm"
 
-                                                        else:
-                                                                if Mariokart8_Character_want == ("IHateYou"):
-                                                                        Google_path = "https://www.youtube.com/watch?v=jDwVkXVHIqg"
-                                                                        print ("https://www.youtube.com/watch?v=jDwVkXVHIqg")
+        elif Mariokart8_Character_want == ("IHateYou"):
+                Google_path = "https://www.youtube.com/watch?v=jDwVkXVHIqg"
+                print ("https://www.youtube.com/watch?v=jDwVkXVHIqg")
 
-                                                                else:
-                                                                        if Mariokart8_Character_want == ("ShopForMario"):
-                                                                                Google_path = "https://www.nintendo.com/us/store/?srsltid=AfmBOopDzWyI6mYVKKO4lXNtetExhiEmpAZAcRUp-ytLdmX3GgHiXZa_"
+        elif Mariokart8_Character_want == ("ShopForMario"):
+                Google_path = "https://www.nintendo.com/us/store/?srsltid=AfmBOopDzWyI6mYVKKO4lXNtetExhiEmpAZAcRUp-ytLdmX3GgHiXZa_"
 
-                                                                        else:
-                                                                                 if Mariokart8_Character_want == ("FunMario"):
-                                                                                        Google_path = "https://www.youtube.com/channel/UCNK813T2BNBwcfDPDTPeMPA"
+        elif Mariokart8_Character_want == ("FunMario"):
+                Google_path = "https://www.youtube.com/channel/UCNK813T2BNBwcfDPDTPeMPA"
 
-        webbrowser.open(Google_path)
+webbrowser.open(Google_path)
