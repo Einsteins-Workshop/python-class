@@ -60,7 +60,7 @@ def determine_solution(file_name):
         return piles_to_move
 
 
-# Proper format to be evaluated by USACO
+# Proper format to be evaluated by USACO  
 # with open("haybales.out", "w") as f:
 #    f.write(str(determine_solution("haybales.in")))
 #    exit()

@@ -65,7 +65,6 @@ def ask_ask():
         if (up == "north"):
             north_north()
 
-
 def Start_Start():
     start = input("You are in a forest at night. You can go east or west: ")
     if (start == "east"):
