@@ -1,0 +1,62 @@
+{
+  "title": "My First Person Game",
+  "window_size": [
+    800,
+    600
+  ],
+  "background_color": [
+    0.9568627450980393,
+    0.058823529411764705,
+    0.7333333333333333,
+    1.0
+  ],
+  "move_speed": 10.0,
+  "mouse_sensitivity": 0.2,
+  "objects": [
+    {
+      "id": 0,
+      "type": "plane",
+      "position": [
+        0,
+        10,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "id": 1,
+      "type": "cube",
+      "position": [
+        0,
+        10,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "id": 2,
+      "type": "cube",
+      "position": [
+        0,
+        10,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "id": 3,
+      "type": "cube",
+      "position": [
+        0,
+        10,
+        0
+      ],
+      "scale": 1.0
+    }
+  ],
+  "player_start": [
+    0.0,
+    0.0,
+    0.0
+  ]
+}
