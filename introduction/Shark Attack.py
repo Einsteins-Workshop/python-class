@@ -66,12 +66,40 @@ turtle.onkey(move_up, "w")
 
 def move_down():
     cursor.left(-90)
-    cursor.backward(-50)
+    cursor.backward(50)
     cursor.right(-90)
+
+def move_Ldiagonal():
+    cursor.left(45)
+    cursor.backward(-50)
+    cursor.right(45)
+
+def move_Rdiagonal():
+    cursor.left(145)
+    cursor.backward(-50)
+    cursor.right(145)
+
+def move_downRdiagonal():
+    cursor.left(-145)
+    cursor.backward(-50)
+    cursor.right(-145)
+
+def move_downLdiagonal():
+    cursor.left(-45)
+    cursor.backward(-50)
+    cursor.right(-45)
 
 cursor.color("orange")
 
 turtle.onkey(move_down, "s")
+
+turtle.onkey(move_Ldiagonal, "e")
+
+turtle.onkey(move_Rdiagonal, "q")
+
+turtle.onkey(move_downRdiagonal, "z")
+
+turtle.onkey(move_downLdiagonal, "x")
 
 turtle.onkey(colors, " ")
 
