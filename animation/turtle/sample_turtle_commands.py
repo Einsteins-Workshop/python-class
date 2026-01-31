@@ -28,15 +28,12 @@ cursor.forward(30)
 cursor.color("red")
 cursor.forward(30)
 
-# filling color of polygons and regions
-
-# Getting information about turtle position
-print(cursor.heading())
-print(cursor.xcor())
-print(cursor.ycor())
-print(cursor.pos())
-
-# Repositioning turtle
+=======
+cursor.goto(10,10)
+cursor.stamp()
+cursor.setx(20)
+cursor.sety(20)
+cursor.dot(10)
 
 # To retain window, must always finish with turtle.done()
 turtle.done()
