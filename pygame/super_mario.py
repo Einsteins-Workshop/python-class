@@ -35,18 +35,74 @@ class Player(pygame.sprite.Sprite):
         self.index = 0
         self.counter = 0
 
-        # Create player sprite (simple rectangle for now)
-        self.image = pygame.Surface((40, 40))
-        self.image.fill(RED)
+        # Create 8-bit Mario sprite
+        self.image = self.create_mario_sprite()
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
-        self.width = 40
-        self.height = 40
+        self.width = 32
+        self.height = 32
         self.vel_y = 0
         self.jumped = False
         self.direction = 1
         self.in_air = True
+
+    def create_mario_sprite(self):
+        # Create a 32x32 surface for Mario
+        sprite = pygame.Surface((32, 32))
+        sprite.set_colorkey(BLACK)
+        sprite.fill(BLACK)
+
+        # Define colors
+        skin = (255, 206, 180)
+        red = (255, 0, 0)
+        blue = (0, 0, 255)
+        brown = (139, 69, 19)
+
+        # 8-bit Mario pixel art (simplified)
+        # Hat (red)
+        for x in range(8, 24):
+            sprite.set_at((x, 4), red)
+        for x in range(4, 28):
+            sprite.set_at((x, 8), red)
+
+        # Face (skin)
+        for x in range(8, 24):
+            sprite.set_at((x, 12), skin)
+        for x in range(4, 28):
+            sprite.set_at((x, 16), skin)
+
+        # Eyes
+        sprite.set_at((12, 12), BLACK)
+        sprite.set_at((20, 12), BLACK)
+
+        # Mustache
+        for x in range(8, 24):
+            sprite.set_at((x, 18), brown)
+
+        # Body (red shirt)
+        for x in range(8, 24):
+            sprite.set_at((x, 20), red)
+            sprite.set_at((x, 24), red)
+
+        # Overalls (blue)
+        sprite.set_at((8, 22), blue)
+        sprite.set_at((12, 22), blue)
+        sprite.set_at((20, 22), blue)
+        sprite.set_at((24, 22), blue)
+
+        # Legs (blue)
+        for y in range(26, 30):
+            sprite.set_at((10, y), blue)
+            sprite.set_at((22, y), blue)
+
+        # Shoes (brown)
+        for x in range(8, 14):
+            sprite.set_at((x, 30), brown)
+        for x in range(20, 26):
+            sprite.set_at((x, 30), brown)
+
+        return sprite
 
     def update(self, game_over):
         dx = 0
@@ -100,14 +156,20 @@ class Player(pygame.sprite.Sprite):
             coin_collected = pygame.sprite.spritecollide(self, coin_group, True)
             if coin_collected:
                 global score
-                score += len(coin_collected) * 10
+                score += len(coin_collected) *10
 
             # Update player position
             self.rect.x += dx
             self.rect.y += dy
 
+            if self.rect.left<0:
+                self.rect.left = 0
+
+            if self.rect.right>SCREEN_WIDTH:
+                self.rect.right = SCREEN_WIDTH
+
         elif game_over == -1:
-            self.image.fill((100, 0, 0))
+            self.image.fill((WHITE))
 
         # Draw player
         screen.blit(self.image, self.rect)
@@ -185,7 +247,7 @@ def create_level():
     platform = Platform(200, 450, 150, 20)
     platform_group.add(platform)
 
-    platform = Platform(450, 350, 100, 20)
+    platform = Platform(230, 350, 100, 20)
     platform_group.add(platform)
 
     platform = Platform(100, 300, 100, 20)
@@ -223,6 +285,17 @@ def create_level():
     coin = Coin(660, 350)
     coin_group.add(coin)
 
+    coin = Coin(300, 350)
+    coin_group.add(coin)
+
+    coin = Coin(250, 350)
+    coin_group.add(coin)
+
+    coin = Coin(500, 350)
+    coin_group.add(coin)
+
+    coin = Coin(400, 350)
+    coin_group.add(coin)
 
 # Create player
 player = Player(100, SCREEN_HEIGHT - 130)
@@ -271,6 +344,7 @@ while run:
                 player.rect.x = 100
                 player.rect.y = SCREEN_HEIGHT - 130
                 player.vel_y = 0
+                player.image=player.create_mario_sprite()
 
                 # Clear and recreate level
                 platform_group.empty()
