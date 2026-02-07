@@ -202,12 +202,11 @@ class Enemy(pygame.sprite.Sprite):
         self.move_counter = 0
 
     def update(self):
-        self.rect.x += self.move_direction * 2
+        self.rect.x += self.move_direction * 2000
         self.move_counter += 1
-        if abs(self.move_counter) > 50:
+        if abs(self.move_counter) > 5:
             self.move_direction *= -1
             self.move_counter *= -1
-
         screen.blit(self.image, self.rect)
 
 
@@ -259,11 +258,67 @@ def create_level():
     platform = Platform(350, 200, 100, 20)
     platform_group.add(platform)
 
+    platform = Platform(350, 200, 100, 20)
+    platform_group.add(platform)
+
+    platform = Platform(350, 200, 100, 20)
+    platform_group.add(platform)
+
+    platform = Platform(400, 300, 100, 20)
+    platform_group.add(platform)
+
+
+    platform = Platform(320, 200, 100, 20)
+    platform_group.add(platform)
+
+
     # Enemies
     enemy = Enemy(250, 420)
     enemy_group.add(enemy)
 
     enemy = Enemy(600, 370)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(670, 40)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(500, 380)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(250, 420)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(600, 370)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(670, 40)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(500, 380)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(250, 420)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(600, 370)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(670, 40)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(500, 380)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(250, 420)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(600, 370)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(670, 40)
+    enemy_group.add(enemy)
+
+    enemy = Enemy(550, 300)
     enemy_group.add(enemy)
 
     # Coins
@@ -308,6 +363,7 @@ font = pygame.font.Font(None, 36)
 
 # Game loop
 run = True
+time_to_add_gameover = None
 while run:
     clock.tick(FPS)
 
@@ -326,11 +382,32 @@ while run:
     score_text = font.render(f'Score: {score}', True, WHITE)
     screen.blit(score_text, (10, 10))
 
-    # Game over text
-    if game_over == -1:
+    if time_to_add_gameover and time_to_add_gameover <= pygame.time.get_ticks():
         game_over_text = font.render('GAME OVER! Press R to Restart', True, RED)
         text_rect = game_over_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
         screen.blit(game_over_text, text_rect)
+
+
+    # Game over text
+    if game_over == -1:
+
+        if not time_to_add_gameover:
+            time_to_add_gameover = pygame.time.get_ticks() + 5000
+
+        scaryboy = pygame.image.load('scaryboy.png')
+
+
+        screen.blit(scaryboy, (SCREEN_WIDTH // 4.5, SCREEN_HEIGHT // 4.5))
+
+        if time_to_add_gameover and time_to_add_gameover <= pygame.time.get_ticks():
+            game_over_text = font.render('GAME OVER! Press R to Restart', True, RED)
+            text_rect = game_over_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
+            screen.blit(game_over_text, text_rect)
+
+    if score == 100:
+
+        cat = pygame.image.load('Cat.jpg')
+        screen.blit(cat, (SCREEN_WIDTH // 4.5, SCREEN_HEIGHT // 6))
 
     # Event handler
     for event in pygame.event.get():
@@ -345,6 +422,8 @@ while run:
                 player.rect.y = SCREEN_HEIGHT - 130
                 player.vel_y = 0
                 player.image=player.create_mario_sprite()
+
+                time_to_add_gameover = None
 
                 # Clear and recreate level
                 platform_group.empty()
