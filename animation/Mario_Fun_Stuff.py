@@ -17,7 +17,7 @@ if Mariokart8_Character_want.isnumeric():
 
         if int(Mariokart8_Character_want)>44:
             image_path = ""
-        ddah5ao
+
         if int(Mariokart8_Character_want) < 1:
                 image_path = "ddah5ao-4e201ced-8e18-4d59-81c9-c8742fc05d19.png"
 
@@ -194,4 +194,4 @@ else:
         elif Mariokart8_Character_want == ("FunMario"):
                 Google_path = "https://www.youtube.com/channel/UCNK813T2BNBwcfDPDTPeMPA"
 
-webbrowser.open(Google_path)
+        webbrowser.open(Google_path)

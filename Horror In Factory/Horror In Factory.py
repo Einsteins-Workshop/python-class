@@ -2,33 +2,35 @@ from PIL import Image
 
 import time
 
-# Get current time in seconds since the epoch
-seconds = time.time()
-print(f"Seconds since epoch: {seconds}") #
-
-# Delay the program for 2 seconds
-print("Printed immediately.")
-time.sleep(2)
-print("Printed after 2 seconds.")
-from PIL import Image
-
 import webbrowser
 
 import numpy
 
-Mariokart8_Character_want = input("Type stuff to find Mario things or enter number 1-44 for a mariokart 8 character:")
+#PICKLE = input("Look the poster")
 
-if Mariokart8_Character_want == ("Random"):
-                num = numpy.random.randint(43)
-                num=+1
+#if PICKLE == ("Random"):
+                #num = numpy.random.randint(500000000)
+                #num=+1
 
-if Mariokart8_Character_want.isnumeric():
+     #Then print your mad lib using the user input
+#print("Your Character is")
 
-        # Then print your mad lib using the user input
-        print("Your Character is")
+#if int(PICKLE) > 0:
+                #image_path = "cute-sausage-cartoon-character-holding-600nw-2727501015.webp"
 
-        if int(Mariokart8_Character_want) < 1:
-                image_path = "il_fullxfull.4590808898_df8r.webp"
+                #image = Image.open(image_path)
+                #image.show()
 
-image = Image.open(image_path)
-        image.show()
+print("Hello welcome to your first shift at The John & Brothers CO")
+
+time.sleep(2.5)
+
+print("Would you like to see the building press 1 to see or no to go on")
+
+PICKLE = input("Look the poster")
+
+if int(PICKLE) > 1:
+    image_path = "cute-sausage-cartoon-character-holding-600nw-2727501015.webp"
+
+            image = Image.open(image_path)
+            image.show("cute-sausage-cartoon-character-holding-600nw-2727501015.webp")

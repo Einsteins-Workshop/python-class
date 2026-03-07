@@ -16,27 +16,27 @@ def  colors():
     while show_colors:
         turtle.Screen().bgcolor("red")
 
-        time.sleep(0.1)
+        time.sleep(0.00001)
 
         turtle.Screen().bgcolor("orange")
 
-        time.sleep(0.1)
+        time.sleep(0.00001)
 
         turtle.Screen().bgcolor("yellow")
 
-        time.sleep(0.1)
+        time.sleep(0.00001)
 
         turtle.Screen().bgcolor("green")
 
-        time.sleep(0.1)
+        time.sleep(0.00001)
 
         turtle.Screen().bgcolor("blue")
 
-        time.sleep(0.1)
+        time.sleep(0.00001)
 
         turtle.Screen().bgcolor("purple")
 
-        time.sleep(0.1)
+        time.sleep(0.000001)
 
 
 cursor = turtle.Turtle()
