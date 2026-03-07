@@ -1,0 +1,23 @@
+Character concept 1
+
+
+character stuff
+    Name (Whatever you want)
+    Color (Whatever you want)
+
+mix and match stats
+    Alignment (Superstructure, Survivors, Fallen)
+    Class (Fighter, Ranger, Alchemist, Assassin, Noble)
+    Casting type (Void, Corruption, Fallen sun, Telepathy, Opalescent, Gravity)
+
+number stats (2)
+    Strength
+    Stealth
+    Knowledge
+    Bravery
+    Dexterity
+
+base vitals
+    Health (15)
+    Stamina (10)
+    Attunement (12)
