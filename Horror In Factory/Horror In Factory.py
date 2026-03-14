@@ -25,12 +25,72 @@ print("Hello welcome to your first shift at The John & Brothers CO")
 
 time.sleep(2.5)
 
-print("Would you like to see the building press 1 to see or no to go on")
+print("Would you like to see the building press yes to see or no to go on.")
 
 PICKLE = input("Look the poster")
 
-if int(PICKLE) > 1:
-    image_path = "cute-sausage-cartoon-character-holding-600nw-2727501015.webp"
+if (PICKLE) == ("yes"):
+    Image_path = "istockphoto-1179437137-612x612.jpg"
 
-            image = Image.open(image_path)
-            image.show("cute-sausage-cartoon-character-holding-600nw-2727501015.webp")
+    Image = Image.open(Image_path)
+    Image.show("istockphoto-1179437137-612x612.jpg")
+
+    time.sleep(10)
+
+    print("As you walk to the abandon Factory you see the name.")
+
+    time.sleep(4.6)
+
+    print("You Stop you see a map on the brick wall it shows you the hole map of the factory.")
+
+    time.sleep(6)
+
+    print("Press M  to look at map and E to take the map")
+
+    time.sleep(3)
+
+    print("Take map")
+
+elif (PICKLE) == ("no"):
+     print("As you walk to the abandon Factory you see the name.")
+
+     time.sleep(4.6)
+
+     print("You Stop you see a map on the brick wall it shows you the hole map of the factory.")
+
+     time.sleep(6)
+
+     print ("Press M  to look at map and E to take the map")
+
+     time.sleep(3)
+
+     print ("Take map")
+
+HI = input()
+
+if (HI) == ("e"):
+     print ("Good Job")
+
+     time.sleep(2)
+
+     print("Hit m to look at map")
+     HI = input()
+     if (HI) == ("m"):
+         Image_path = "Factory_Map_0.5.4.823.webp"
+
+         Image = Image.open(Image_path)
+         Image.show("Factory_Map_0.5.4.823.webp")
+elif (HI) == ("m"):
+         Image_path = ("Factory_Map_0.5.4.823.webp")
+
+         Image = Image.open(Image_path)
+         Image.show("Factory_Map_0.5.4.823.webp")
+
+
+time.sleep(10)
+
+print("As you walk in you look around")
+
+time.sleep(2)
+
+print("Jimmy: Hi my name is Jimmy.")
