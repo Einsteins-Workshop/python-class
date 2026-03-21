@@ -1,30 +1,28 @@
-# For conditions, there are the ==, > , >=, <, <= operators. You can use "and" and "or"
-# to combine conditions and not to negate
 
-# You can combine this with the if clause to run a block of commands if it satisfies a condition
-number = int(input("Enter a number\n"))
+import time
+import turtle
+from random import randint
 
-if number > 100:
-    print("Your number is greater than 100.")
+ALIGNMENT = "Center"
+FONT = ("Arial",20,"normal")
+STARTING_POSITION = [(0,0),(-20,0),(-40,0)]
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
+SCREEN = turtle.Screen()
 
-if number == 10:
-    print("Your number is 10")
+class Snake:
+    def __int__(self):
+        self.segments = []
+        self.create_snake()
+        self.head = self.segments[0]
+        self.head.shape("triangle")
 
-if not(number == 3):
-    print("Your number is not 3")
+    def create_snake(self):
+        for position in STARTING_POSITION:
+            self.add_segment(position)
 
-if (number % 3 == 0) or (number %2 == 0):
-    print("Your number is divisible by either 2 or 3")
-
-# Multiple if statements can be chained with elif and a default clause can be added with else.
-# Note that once part of an if/elif chain is matched, the rest will be ignored.
-
-age = int(input("How old are you?\n"))
-if age > 90:
-    print("You are too old to party, grandpa.")
-elif age < 0:
-    print("You're not yet born.")
-elif age >= 18:
-    print("You are allowed to party.")
-else:
-    print("You are too young to party.")
+    def add_segment(self,position):
+        new_segment = turtle.Turtle("square")
+        new_segment.color()("white")

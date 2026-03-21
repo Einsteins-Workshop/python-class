@@ -59,6 +59,33 @@ def move_up():
     cursor.forward(50)
     cursor.right(90)
 
+turtle.onkey(move_up, "s")
+
+
+def move_down():
+    cursor.left(90)
+    cursor.backward(-50)
+    cursor.right(90)
+
+def move_Ldiagonal():
+    cursor.left(-45)
+    cursor.backward(50)
+    cursor.right(-45)
+
+def move_Rdiagonal():
+    cursor.left(-145)
+    cursor.backward(50)
+    cursor.right(-145)
+
+def move_downRdiagonal():
+    cursor.left(145)
+    cursor.backward(50)
+    cursor.right(145)
+
+def move_downLdiagonal():
+    cursor.left(45)
+    cursor.backward(50)
+    cursor.right(45)
 
 
 turtle.onkey(move_up, "w")

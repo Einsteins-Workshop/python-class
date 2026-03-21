@@ -6,7 +6,7 @@ import webbrowser
 
 import numpy
 
-#PICKLE = input("Look the poster")
+#PICKLE = input("Look at bulding")
 
 #if PICKLE == ("Random"):
                 #num = numpy.random.randint(500000000)
@@ -27,7 +27,7 @@ time.sleep(2.5)
 
 print("Would you like to see the building press yes to see or no to go on.")
 
-PICKLE = input("Look the poster")
+PICKLE = input("Look at building")
 
 if (PICKLE) == ("yes"):
     Image_path = "istockphoto-1179437137-612x612.jpg"
@@ -80,7 +80,7 @@ if (HI) == ("e"):
 
          Image = Image.open(Image_path)
          Image.show("Factory_Map_0.5.4.823.webp")
-elif (HI) == ("m"):
+     elif (HI) == ("m"):
          Image_path = ("Factory_Map_0.5.4.823.webp")
 
          Image = Image.open(Image_path)
@@ -91,6 +91,41 @@ time.sleep(10)
 
 print("As you walk in you look around")
 
-time.sleep(2)
+time.sleep(3)
 
 print("Jimmy: Hi my name is Jimmy.")
+
+time.sleep(2)
+
+print("Do you want to say hi back yes or no")
+
+time.sleep(4)
+
+print("yes or no")
+
+Joe = input()
+
+Joe = input()
+if (Joe) == ("yes"):
+
+ print("Hi")
+
+time.sleep(1)
+
+print("Jimmy: Hello I was chosen to guide you around the factory")
+
+time.sleep(4)
+
+print("You: Ok thanks")
+
+if (Joe) == ("no"):
+
+    print("....")
+
+time.sleep(1)
+
+print("Jimmy: Sorry I was chosen to guide you around the factory")
+
+time.sleep(4)
+
+print("You: Ok thanks")
