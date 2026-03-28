@@ -19,7 +19,7 @@ classdict= {
     "2": "ranger",
     "3": "alchemist",
     "4": "assassin",
-    "5": "noble",
+    "5": "scavenger",
 }
 
 
@@ -35,7 +35,7 @@ print("1-fighter")
 print("2-ranger")
 print("3-Alchemist")
 print("4-assassin")
-print("5-noble")
+print("5-scavenger")
 class1 = input(f"please select a class for {name1}. This will have a major effect on gameplay.")
 print("-----------")
 print("1-void")
