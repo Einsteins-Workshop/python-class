@@ -13,7 +13,7 @@ print(pet_name)
 
 # To get input from the user from the console, use the input function. You can include
 # a prompt, as an argument, to the function.
-name = input("Please enter your first name.")
+name = input("Please enter your first name.\n")
 
 # Strings can be combined using either + (the concatenation operator), or using string interpolation
 # using f"" templates.
