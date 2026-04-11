@@ -1,5 +1,4 @@
-import sys
-from termcolor import  colored
+
 
 alignmentdict= {
     "1": "superstructure- aligned",

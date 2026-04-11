@@ -11,19 +11,25 @@ en1hp=30
 en2hp=10
 en3hp=10
 
-
+itemdescs= {
+    "medkit": "Medkit\nHeals 10 hp from an ally of your choice.",
+    "burn cream": "burn cream\ncures burn from an ally of your choice.",
+    "healing remedy": "healing remedy\nheals 5 hp from an ally of your choice.",
+    "poison darts": "poison darts\ndeals 2 damage to and gives poison 5 to\n an enemy of your choice.",
+}
 
 enlist= {
     "1": "solid calcite guardian",
-    "2": "👁voidwalker",
-    "3": "👁other voidwalker",
+    "2": "voidwalker",
+    "3": "other voidwalker",
 }
 #the player's inventory loadout at the start of the game
 items=["medkit","medkit","burn cream","healing remedy","poison darts"]
 scrap=100
 
 def turn (name, cl, mg, cn):
-
+    itemused = 0
+    action = 0
     healths = {
         "1": health1,
         "2": health2,
@@ -56,7 +62,7 @@ def turn (name, cl, mg, cn):
     actioncat=input(f"what would {name} like to do?")
     if actioncat=="1":
         print("lasered will do a basic attack.")
-        action1=1
+        action=1
     if actioncat=="2":
         print(" \n ")
         print("---------------")
@@ -77,30 +83,45 @@ def turn (name, cl, mg, cn):
         print("5-acidic spray [5]")
         print("deals 1-2 peirce damage to all enemies.")
         print(" \n ")
-        action1=input(f"what ability will {name} use?")
+        action=input(f"what ability will {name} use?")
+
+
+
+
+    if actioncat == "3":
+        print(" \n-----------------")
+        for (i, item) in enumerate(items, start=1):
+            print(i,f"- {(itemdescs[item])}\n-----------------")
+        itemused=input(f"what item would {name} like to use?")
+
+
 
     print(" \n ")
     print("---------------")
 
     print("1-⌬solid calcite guardian [",en1hp,"]")
-    print("2-voidwaker [",en2hp,"]")
-    print("3-other voidwaker [",en3hp,"]")
+    print("2-👁voidwaker [",en2hp,"]")
+    print("3-👁other voidwaker [",en3hp,"]")
     print(" ")
 
-    target1=input(f"who will {name} target?")
+    target=input(f"who will {name} target?")
 
-    print(name,"will target the",(enlist[target1]),".")
+    print(name,"will target the",(enlist[target]),".")
+    return target, itemused, action
 print (" \n \n \n \n \n \n \n \n")
 print ("<|> FLOOR 1 <|> \n \n 👁They are watching. 👁They have found us. 👁They are not far behind.")
 print(" \n \n ")
 print ("tnh has encountered a solid calcite guardian. two voidwakers have also decided to join.")
 print (" \n ")
-turn("lasered","3","4","1")
+target1,itemused1,action1=turn("lasered","3","4","1")
+print(target1,action1,itemused1)
 print(" \n ")
 print("---------------")
 print(" \n ")
-turn("testingjared","1","3","2")
+target2,itemused2,action2=turn("testingjared","1","3","2")
+print(target2,action2,itemused2)
 print(" \n ")
 print("---------------")
 print(" \n ")
-turn("other lasered","4","6","3")
+target3,itemused3,action3=turn("other lasered","4","6","3")
+print(target3,action3,itemused33)
