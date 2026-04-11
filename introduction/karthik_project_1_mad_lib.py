@@ -8,9 +8,9 @@ color = input("Enter a color:")
 plural_noun = input("Enter a plural noun:")
 noun = input("Enter a noun:")
 adjective = input("Enter an adjective:")
-input1=input("Give me a number:")
+input1=int(input("Give me a number:"))
 input2=5
-output=input2+4
+output=input1+4
 print("Hello", name ,"!")
 # Then print your mad lib using the user input
 print("Roses are", color)
