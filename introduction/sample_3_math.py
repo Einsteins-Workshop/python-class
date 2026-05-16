@@ -1,76 +1,69 @@
-name = input("What is your name: ")
+def did_you_die():
+    print("You wake in a world with no color. You look around and see that you are on a path.")
+    lost = input("You can go left(1) or right(2). Enter here: ")
+    print("Oh you did option" ,lost, ". Sorry but no mater what you piked you can only go left.")
+    print("You walk for a long time, then you go to sleep.")
+    print("When you wake you find your self in a new world. This world has blue grass and a green sky.")
+    print("You can see two doors in the air. The left is made of gold and the right is made of wood.")
+    doors = input("You can go in a door. Do you take the left door(1) or do you take the right(2). Enter here: ")
+    if (doors == "1"):
+        print("You try to open the gold door but you can't so you go through the wood door.")
+        print("You walk through the wood door then you find you self back at your house")
+        print("YOU WIN!!")
+    if (doors == "2"):
+        print("You walk through the wood door then you find you self back at your house")
+        print("YOU WIN!!")
 
-print("Hi", name, "are you ready to play? Ok then lets go!")
+name = input("What is the name you would like to have for this game? Enter here: ")
 
-# locations
-#player = {
-#    'name': name,
-#    'have_sword': False
-#}
+print("Hello", name, "I think you will have fun with this so lets get started!!")
+print("Just a warning you can not go back after you pick what to do!!")
+print("   ")
+print("It's a dark and stormy night and you find your self in the woods on a path!")
 
-#print("You pick up a sword")
-#player['have_sword'] = True
-def north_north():
-    print("You go north. And you are at a river.")
-    eastp = input("You can go east, west, north or south: ")
-    if (eastp == "east"):
-        print("You go east. You die 💀")
-    if (eastp == "west"):
-        Start_Start()
-    if (eastp == "north"):
-        print("You go north and you find a dragon. You die 💀")
-    if (eastp == "south"):
-        uppp = input("You go south. You are in a cave, you can go up or north")
-        if (uppp == "up"):
-            downp = input("You go up and find a second cave. You can go west or down: ")
-            if (downp == "down"):
-                down_down()
-            if (downp == "west"):
-                print("You found the exit. You live")
-                print("🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉")
-                print("😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆")
-        if (uppp == "north"):
-            north_north()
-def down_down():
-    uppx = input("You go down. You are in a cave, you can go up or north")
-    if (uppx == "up"):
-        downx = input("You go up and find a second cave. You can go west or down: ")
-        if (downx == "down"):
-            down_down()
-        if (downx == "west"):
-            print("You found the exit. You live")
-            print("🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉")
-            print("😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆")
-    if (uppx == "north"):
-        north_north()
-def ask_ask():
-    print("You go east. And you are at a river.")
-    east = input("You can go east, west, north or south: ")
-    if (east == "east"):
-        print("You go east. You die 💀")
-    if (east == "west"):
-        Start_Start()
-    if (east == "north"):
-        print("You go north and you find a dragon. You die 💀")
-    if (east == "south"):
-        up = input("You go south. You are in a cave, you can go up or north: ")
-        if (up == "up"):
-            down = input("You go up and find a second cave. You can go west or down: ")
-            if (down == "down"):
-                down_down()
-            if (down == "west"):
-                print("You found the exit. You live")
-                print("🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉")
-                print("😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆")
-        if (up == "north"):
-            north_north()
+start = input("You can go left(1) or right(2)! Enter your choice here: ")
 
-def Start_Start():
-    start = input("You are in a forest at night. You can go east or west: ")
-    if (start == "east"):
-        ask_ask()
-    if (start == "west"):
-        west = input("You go west. And you are at a cliff, you can go east: ")
-        west2 = input("You go east. You are in a forest at night. You can go east: ")
-        ask_ask()
-Start_Start()
+if(start == "1"):
+    print("You start going left and you find a cave. you enter the cave and find a dragon next to you.")
+    dragon = input("There is a bow on the ground. Do you try to kill the dragon with the bow(1) or do you wake the dragon to make a deal(2). Enter here: ")
+    if(dragon == "1"):
+        print("You fire the bow but it bounces of the dragon. Now the dragon is angry and has eaten you.")
+        print("The end")
+        did_you_die()
+    if(dragon == "2"):
+        print("Dragon is grumpy after you wake it. And now it has eaten you.")
+        print("The end")
+        did_you_die()
+
+if(start == "2"):
+    print("You travel for hours then you find a meadow with red flowers on the right")
+    flowers = input("Do you enter the meadow(1) or do you keep going(2). Enter here: ")
+    if(flowers == "1"):
+        print("The flowers put you to sleep for the rest of time.")
+        print("The end")
+        did_you_die()
+    if(flowers == "2"):
+        print("You keep walking until you find a house")
+        house = input("Do you go into the house(1) or not(2). Enter here: ")
+        if(house == "1"):
+            print("You Enter the house and the door slams behind you. You are trapped!")
+            print("The end")
+            did_you_die()
+        if(house == "2"):
+            print("You keep going then you see a window in the air next to a pine tree.")
+            window = input("Do you go in the window(1) or do you keep going(2)? Enter here: ")
+            if(window == "2"):
+                print("You walk past the window then the pine tree falls on you.")
+                print("The end")
+                did_you_die()
+            if(window == "1"):
+                print("You find your self in a new world. This world has blue grass and a green sky.")
+                print("You can see two doors in the air. The left is made of gold and the right is made of wood.")
+                doors = input("You can go in a door. Do you take the left door(1) or do you take the right(2). Enter here: ")
+                if(doors == "1"):
+                    print("You walk through the gold door into darkness then you find your self falling into a volcano.")
+                    print("The end")
+                    did_you_die()
+                if(doors == "2"):
+                    print("You walk through the wood door then you find you self back at your house")
+                    print("YOU WIN!!")
