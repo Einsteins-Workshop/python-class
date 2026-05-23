@@ -1,3 +1,6 @@
+italics = '\033[3m'
+end = '\033[0m'
+
 health1=15
 stamina1=10
 attunement1=12
@@ -66,23 +69,40 @@ def turn (name, cl, mg, cn):
     if actioncat=="2":
         print(" \n ")
         print("---------------")
-
-        print(" ")
-        print("1-herbal brew [5]")
-        print("Heals 5-7 hp from an ally of your choice.")
-        print(" ")
-        print("2-24 karat concoction [6]")
-        print("deals 4 capitalism and 4 opalescent damage \nto an enemy of your choice.")
-        print(" ")
-        print("3-liquid focus elixir [4]")
-        print("strengthens the psi abilities of an ally of \nyour choice for this turn.")
-        print(" ")
-        print("4-shade shielding aromatic [4]")
-        print("boosts the DEF of an ally of your choice for \nthis turn.")
-        print(" ")
-        print("5-acidic spray [5]")
-        print("deals 1-2 peirce damage to all enemies.")
-        print(" \n ")
+        if cl=="1":
+            print(" ")
+            print("1-Multi- attack [5]")
+            print("Deals 1 Wp damage and 1-2 peirce damage to all enemies.")
+            print(" ")
+            print("2-Better slash [6]")
+            print("deals 4 WP damage and 4 Pierce damage\nto an enemy of your choice.")
+            print(" ")
+            print("3-liquid focus elixir [4]")
+            print("strengthens the psi abilities of an ally of \nyour choice for this turn.")
+            print(" ")
+            print("4-shade shielding aromatic [4]")
+            print("boosts the DEF of an ally of your choice for \nthis turn.")
+            print(" ")
+            print("5-acidic spray [5]")
+            print("deals 1-2 peirce damage to all enemies.")
+            print(" \n ")
+        if cl=="3":
+            print(" ")
+            print("1-herbal brew [5]")
+            print("Heals 5-7 hp from an ally of your choice.")
+            print(" ")
+            print("2-24 karat concoction [6]")
+            print("deals 4 capitalism and 4 opalescent damage \nto an enemy of your choice.")
+            print(" ")
+            print("3-liquid focus elixir [4]")
+            print("strengthens the psi abilities of an ally of \nyour choice for this turn.")
+            print(" ")
+            print("4-shade shielding aromatic [4]")
+            print("boosts the DEF of an ally of your choice for \nthis turn.")
+            print(" ")
+            print("5-acidic spray [5]")
+            print("deals 1-2 peirce damage to all enemies.")
+            print(" \n ")
         action=input(f"what ability will {name} use?")
 
 
@@ -108,8 +128,12 @@ def turn (name, cl, mg, cn):
 
     print(name,"will target the",(enlist[target]),".")
     return target, itemused, action
+print (f" \n \n \n \n \nyou stand at the foot of tower {italics} Epsilon|14-δ {end}")
+Useless=input("Are you ready to start? (type anything)")
+
 print (" \n \n \n \n \n \n \n \n")
-print ("<|> FLOOR 1 <|> \n \n 👁They are watching. 👁They have found us. 👁They are not far behind.")
+print ("<|> FLOOR 1 <|> \n \n 👁Conceptualization α1 \n This is message written by me, for all of you who will believe, and you who refuse to accept the truth behind the reality unfolding before you. \nFor the longest time, we have been waiting. Waiting for answers, yet seeking them aswell. when we do not find an answer, we claim it will come \nfor us soon, only to get tired and drained from the hundred year wait, so we try again. This cycle has continued for long \nenough, and it is time to put it to an end.")
+
 print(" \n \n ")
 print ("tnh has encountered a solid calcite guardian. two voidwakers have also decided to join.")
 print (" \n ")
@@ -124,4 +148,4 @@ print(" \n ")
 print("---------------")
 print(" \n ")
 target3,itemused3,action3=turn("other lasered","4","6","3")
-print(target3,action3,itemused33)
+print(target3,action3,itemused3)
