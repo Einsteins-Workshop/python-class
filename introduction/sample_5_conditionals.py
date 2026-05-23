@@ -1,45 +1,90 @@
-def back_back():
-    mmove = ["north", "south", "east", "west", "up", "down"]
-    mnext_move = ["north", "south", "east", "west", "up", "down"]
-    mmovee = input("Your in a forest you can go north, south, east or west: ")
-    mgo = mmovee
-    mnext_one = next_move[move.index(mgo)]
-    if (next_one == "north"):
-        mmovee1 = input("You go north. Now you are at a river you can go north, south, east or west: ")
-        mgo1 = mmovee1
-        mnext_one1 = mnext_move[mmove.index(mgo1)]
-        if (mnext_one1 == "north"):
-            print("sorry you drowned")
-    if (mnext_one == "south"):
-        mmovee2 = input("You go south. Now you are at a big pit, you can go down or north: ")
-        mgo2 = mmovee2
-        mnext_one2 = mnext_move[mmove.index(mgo2)]
-        if (mnext_one2 == "down"):
-            print("Sorry you lost your grip and fell")
+def Mage_Mage():
+    Mage_powers = {
+        "Arcane energy level": 10,
+        "Elemental forces level": 10,
+        "reality-altering spells level": 10,
+        "Defense level": 6
+    }
+    print("As a Mage your powers are:")
+    print( Mage_powers)
+def Dark_Mage():
+    Dark_Mage_powers = {
+        "Necromancy level": 10,
+        "Shadow & Chaos Magic level": 10,
+        "Curses level": 10,
+        "Summoning level": 10
+    }
+    print("As a Dark Mage your powers are:")
+    print(Dark_Mage_powers)
+def Healer_Healer():
+    Healer_powers = {
+        "Resurrection level": 10,
+        "Physical Healing level": 10,
+        "Combat level": 6
+    }
+    print("As a Healer your powers are:")
+    print(Healer_powers)
+def Assassin_Assassin():
+    Assassin_powers = {
+        "Martial arts level": 10,
+        "Poison Mastery level": 10,
+        "Stealth level": 10,
+        "Teleportation level": 10,
+        "Cloaking level": 10
+    }
+    print("As a Assassin your powers are:")
+    print(Assassin_powers)
+def Knight_Knight():
+    Knight_powers = {
+        "Combat level": 10,
+        "Combat Spells level": 10,
+        "Traversal abilities level": 10
+    }
+    print("As a Knight your powers are:")
+    print(Knight_powers)
+def Dark_Knight():
+    Dark_Mage_powers = {
+        "Dark magic level": 10,
+        "Necrotic damage level": 10,
+        "Command/summon the undead level": 10
+    }
+    print("As a Dark Knight your powers are:")
+    print(Dark_Mage_powers)
 
-Hi = input("hi what is your name: ")
-print("Hi", Hi)
-print("Ok, lets go!!")
-move = ["north", "south", "east", "west", "up", "down"]
-next_move = ["north", "south", "east", "west", "up", "down"]
-movee = input("Your in a forest you can go north, south, east or west: ")
-go= movee
-next_one = next_move[move.index(go)]
-if(next_one == "north"):
-    movee1 = input("You go north. Now you are at a river you can go north, south, east or west: ")
-    go1 = movee1
-    next_one1 = next_move[move.index(go1)]
-    if(next_one1 == "north"):
-        print("sorry you drowned")
-    if(next_one1 == "south"):
-        back_back()
-if(next_one == "south"):
-    movee2 = input("You go south. Now you are at a big pit, you can go down or north: ")
-    go2= movee2
-    next_one2 = next_move[move.index(go2)]
-    if(next_one2 == "down"):
-        print("Sorry you lost your grip and fell")
-#if(next_one == "east"):
-#    movee3 = input("You go east. Now you are at: ")
-#if(next_one == "west"):
-#    movee1 = input("You go west. Now you are at: ")
+print("Hi, this game is going to be a where you are lost and are trying to find your way.")
+print("You can carry objects and other thing. Your powers are ranked by number.")
+name = input("What do you want your name to be here: ")
+print("   ")
+print("   ")
+
+Starting_powers = {
+    "Magic level": 1,
+    "Attack level": 1,
+    "Defense level": 1
+}
+
+print("Your starting powers are:")
+print(Starting_powers)
+
+print("Ok so you are can pick a class. Please spell thing the same way as shown")
+class_power = input("You can be a Mage, a dark Mage, Healer, a Knight, a Dark Knight or a Assassin: ")
+if (class_power == "Mage"):
+    Mage_Mage()
+
+if (class_power == "Dark Mage"):
+    Dark_Mage()
+
+if (class_power == "Healer"):
+    Healer_Healer()
+
+if (class_power == "Assassin"):
+    Assassin_Assassin()
+
+if (class_power == "Knight"):
+    Knight_Knight()
+
+if (class_power == "Dark Knight"):
+    Dark_Knight()
+
+# Next time add a places and stuff like that or maybe a job
+# Make monsters or stuff
