@@ -11,6 +11,28 @@ def print_board(myboard):
     print( myboard[3], "|",  myboard[4], "|",  myboard[5])
     print("---------")
     print( myboard[6], "|",  myboard[7], "|",  myboard[8])
+
+def check_winner(myboard):
+    winner = None
+    if (myboard[0] == myboard[1]) and (myboard[0] == myboard[2]):
+        winner = myboard[0]
+    elif (myboard[3] == myboard[4]) and (myboard[4] == myboard[5]):
+        winner = myboard[3]
+    elif (myboard[6] == myboard[7]) and (myboard[7] == myboard[8]):
+        winner = myboard[6]
+    elif (myboard[0] == myboard[3]) and (myboard[3] == myboard[6]):
+        winner = myboard[0]
+    elif (myboard[1] == myboard[4]) and (myboard[4] == myboard[7]):
+        winner = myboard[1]
+    elif (myboard[2] == myboard[5]) and (myboard[5] == myboard[8]):
+        winner = myboard[2]
+    elif (myboard[0] == myboard[4]) and (myboard[4] == myboard[8]):
+        winner = myboard[0]
+    elif (myboard[2] == myboard[4]) and (myboard[4] == myboard[6]):
+        winner = myboard [2]
+    if winner:
+        print(f"We have a winner {winner}!")
+        exit()
 # Print the board three elements at a time.
 print_board (board)
 print("Do not pick the same box as your opponent.")
@@ -43,6 +65,7 @@ while input3 in [input1, input2]:
     input3 = input("Player 1, choose a square for your X")
     input3 = int(input3)
 
+
 board[input3]="X"
 print_board (board)
 input4= input("Player 2, choose a square to put your Y")
@@ -63,7 +86,9 @@ while input5 in [input1, input2, input3, input4]:
     input5 = int(input5)
 board[input5]="X"
 print_board (board)
-print("Has anyone won yet? If so, keep putting symbols until board is finished")
+check_winner(board)
+
+print("Has anyone won yet?")
 input6= input("Player 2, choose a square to put your Y")
 input6=int(input6)
 board[input6]="Y"
@@ -72,7 +97,9 @@ while input6 in [input1, input2, input3, input4, input5]:
     print_board(board)
     input6 = input("Player 1, choose a square to put your X")
     input6 = int(input6)
+
 print_board (board)
+check_winner(board)
 print("Has anyone won yet? If so, keep putting symbols until board is finished")
 input7= input("Player 1, choose a square to put your X")
 input7=int(input7)
@@ -83,6 +110,7 @@ while input7 in [input1, input2, input3, input4, input5, input6]:
     input7 = int(input7)
 board[input7]="X"
 print_board (board)
+check_winner(board)
 print("Has anyone won yet? If so, keep putting symbols until board is finished")
 input8= input("Player 2, choose a square to put your Y")
 input8=int(input8)
@@ -93,6 +121,7 @@ while input8 in [input1, input2, input3, input4, input5, input6, input7]:
     input8 = int(input8)
 board[input8]="Y"
 print_board (board)
+check_winner(board)
 print("Has anyone won yet? If so, keep putting symbols until board is finished")
 input9= input("Player 1, choose a square to put your X")
 input9=int(input9)
@@ -103,6 +132,7 @@ while input9 in [input1, input2, input3, input4, input5, input6, input7, input8]
     input9 = int(input9)
 board[input9]="Y"
 print_board (board)
+check_winner(board)
 print("GAME OVER!!!! =)")
 age=int(input("Who won?? 1 or 2?\n"))
 if age == 1:

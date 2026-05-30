@@ -19,6 +19,6 @@ print(f"My {noun} is {adjective}")
 print("and so are you!")
 print("=)")
 print("Remember that number you chose? This is it:" , input1)
-print("This is your number plus 4:" , output ,"!")
-print("This is your new number plus 7:" , output+7 ,"!")
+print("This is your number plus 4:" , output+4 ,"!")
+print("This is your same number plus 7:" , output+7 ,"!")
 
