@@ -1,5 +1,50 @@
+def second_1():
+    PERSONS_NAME = input("Enter a persons name: ")
+    PERSONS_NAME1 = input("Enter a persons name: ")
+    MOVIE = input("Enter a move: ")
+    ADJECTIVE = input("Enter an adjective: ")
+    VERB = input("Enter a verb: ")
+    NOUN = input("Enter a noun: ")
+    CANDY = input("Enter a candy: ")
+    FOOD = input("Enter a food: ")
+    VERB1 = input("Enter a verb: ")
+    VERB2 = input("Enter a verb: ")
+    VERB3 = input("Enter a verb: ")
+    ADJECTIVE1 = input("Enter an adjective: ")
+    ADJECTIVE2 = input("Enter an adjective: ")
+    ADJECTIVE3 = input("Enter an adjective: ")
+    ADJECTIVE4 = input("Enter an adjective: ")
+
+    print("I went to the movies yesterday with", PERSONS_NAME, "and", PERSONS_NAME1)
+    print("We saw", MOVIE, ". It was", ADJECTIVE, ". At one part, I even", VERB, "and ran for")
+    print("the", NOUN, ". During the move, we ate", CANDY, "and", FOOD, ". I got mad")
+    print("because the person sitting behind me kept", VERB1, "during the movie and")
+    print("wouldn't stop", VERB2, ". He was asked to leave after he", VERB3, "across the")
+    print("theatre. It was pretty", ADJECTIVE1, ". Overall, I liked the movie because it was")
+    print(ADJECTIVE2, "and the main character was super", ADJECTIVE3, ". Hopefully next")
+    print("time the people sitting behind me will be more", ADJECTIVE4)
+
+def second_2():
+    qCOLOR = input("Enter a color: ")
+    qADJECTIVE = input("Enter a Adjective: ")
+    qTIME = input("Enter a time: ")
+    qADJECTIVE1 = input("Enter a adjective: ")
+    qPLACE = input("Enter a color: ")
+    qFOOD = input("Enter a food: ")
+    qFOOD1 = input("Enter a food: ")
+    qVERB = input("Enter a verb: ")
+    qVERB1 = input("Enter a verb: ")
+    qNUMBER = input("Enter a number: ")
+
+    print("Bats are so cool! They are", qCOLOR, ",", qADJECTIVE, " animals which have wings.")
+    print("They like to fly around at", qTIME, "which makes some people scared of them.")
+    print("But bats are", qADJECTIVE1, ", and they don't want to hurt people. I have a pet")
+    print("bat that lives in", qPLACE, ". I like to feed him", qFOOD, "and", qFOOD1, ". He likes to")
+    print(qVERB, ". I am his favorite person, but he also likes", qVERB1, ". I want to convince")
+    print("my parents to get me", qNUMBER, "more bats.")
+
 # 1. import 1 to 8
-Start = input("Please input 1,2,3,4,5,6,7 or 8: ")
+Start = input("Please input 1 or 2: ")
 # 2. if imput == 1 to 8
 if(Start == "1"):
     PERSONS_NAME = input("Enter a persons name: ")
@@ -26,6 +71,13 @@ if(Start == "1"):
     print("theatre. It was pretty", ADJECTIVE1, ". Overall, I liked the movie because it was")
     print(ADJECTIVE2, "and the main character was super", ADJECTIVE3, ". Hopefully next")
     print("time the people sitting behind me will be more", ADJECTIVE4)
+    q2 = input("Do you want to keep going: y/n")
+    if (q2 == "y"):
+        print("Ok lets go!")
+        second_2()
+
+    if (q2 == "n"):
+        print("the end")
 
 if(Start == "2"):
     qCOLOR = input("Enter a color: ")
@@ -45,20 +97,11 @@ if(Start == "2"):
     print("bat that lives in", qPLACE, ". I like to feed him", qFOOD, "and", qFOOD1, ". He likes to")
     print(qVERB, ". I am his favorite person, but he also likes", qVERB1, ". I want to convince")
     print("my parents to get me", qNUMBER, "more bats.")
-#if(Start == "3"):
-    #dfa
-#if(Start == "4"):
-    #asdfa
-#if (Start == "5"):
-    #adf
-#if (Start == "6"):
-    #dfa
-#if (Start == "7"):
-    #adfs
-#if (Start == "8"):
-    #sffas
-# 3. madlib
-# 4. def 1_1()
-# 5. repeat without 1
-# 6. do the same wit hh the rest
-# # link to madlibs:ttps://www.thewordfinder.com/wordlibs/
+
+    q = input("Do you want to keep going: y/n")
+    if (q == "y"):
+        print("Ok lets go!")
+        second_1()
+
+    if (q == "n"):
+        print("the end")

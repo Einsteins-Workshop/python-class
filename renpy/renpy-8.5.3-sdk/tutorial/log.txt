@@ -1,30 +1,31 @@
-2026-05-30 14:57:07 UTC
+2026-06-06 14:39:37 UTC
 Windows-11-10.0.22631-SP0
 Ren'Py 8.5.3.26051504
 
-Early init took 26 ms
-Loading error handling took 26 ms
+Early init took 29 ms
+Loading error handling took 44 ms
 212 script files skipped.
-Loading script took 79 ms
-Loading save slot metadata took 12 ms
-Loading persistent took 2 ms
-Running init code took 158 ms
-Loading analysis data took 3 ms
+Loading script took 400 ms
+Loading save slot metadata took 44 ms
+Loading persistent took 3 ms
+ - Init at game/01example.rpy:571 took 1950 ms.
+Running init code took 2032 ms
+Loading analysis data took 7 ms
 Analyze and compile ATL took 3 ms
 Reloading save slot metadata took 1 ms
-Dump and make backups took 22 ms
+Dump and make backups took 23 ms
 Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 23 ms
+Making clean stores took 1 ms
+Initial gc took 24 ms
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
 Creating interface object took 2 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 8 ms
-Save screen analysis took 11 ms
+Load screen analysis took 18 ms
+Analyze screens took 0 ms
+Save screen analysis took 1 ms
 Save pyanalysis took 0 ms
 Save bytecode took 0 ms
 Running _start took 0 ms
@@ -35,7 +36,7 @@ Traceback (most recent call last):
   File "renpy/audio/renpysound.pyx", line 467, in renpy.audio.renpysound.init
   File "renpy/audio/renpysound.pyx", line 112, in renpy.audio.renpysound.check_error
 Exception: WASAPI can't find requested audio endpoint: Element not found.
-Interface start took 129 ms
+Interface start took 136 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1200)
@@ -47,7 +48,3 @@ Version: '4.6.0 Compatibility Profile Context 25.10.36.251110'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1280, 720) physical=(1280, 720) drawable=(1280, 720)
 Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 13 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
