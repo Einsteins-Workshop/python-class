@@ -1,3 +1,5 @@
+import random
+
 italics = '\033[3m'
 end = '\033[0m'
 
@@ -29,6 +31,10 @@ enlist= {
 #the player's inventory loadout at the start of the game
 items=["medkit","medkit","burn cream","healing remedy","poison darts"]
 scrap=100
+
+enat1= ["cal1","cal2","cal3","sm1"]
+
+Randomattack1=random.choice(enat1)
 
 def turn (name, cl, mg, cn):
     itemused = 0
@@ -149,3 +155,4 @@ print("---------------")
 print(" \n ")
 target3,itemused3,action3=turn("other lasered","4","6","3")
 print(target3,action3,itemused3)
+print(Randomattack1) 
